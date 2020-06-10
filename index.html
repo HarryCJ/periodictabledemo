@@ -26,6 +26,7 @@
 		transition: transform 0.2s;
 		transition-timing-function: ease-in-out;
 		cursor: pointer;
+		background: transparent !important;
 	}
 	.pt-table .clickable-element > a {
 		cursor: pointer;
@@ -84,13 +85,33 @@
 	}
 
 	.pt-element > .tabs {
-		opacity: 0;
-		transition: opacity 0.4s;
-		transition-timing-function: ease-in-out;
+		width: 0%;
+		height: 0%;
+		/*overflow: hidden;*/
+		/*transform: scale(0, 0);*/
+		/*opacity: 0;*/
+		/*transition: opacity 0.4s, transform 1s;*/
+		/*transition: opacity 0.2s, transform 0.4s;*/
+		transition: height 0.4s, width 0.4s;
+		/*transition-timing-function: ease-in-out;*/
 	}
 
 	.pt-element.active > .tabs {
+		width: 200%;
+		height: 200%;
+		/*transform: scale(1, 1);*/
+		/*opacity: 1;*/
+		/*transition: opacity 0.2s, transform 0.4s;*/
+	}
+
+	.pt-element-label, .tab-circles {
+		opacity: 0;
+		transition: 0.2s;
+	}
+
+	.pt-element.active .pt-element-label, .pt-element.active .tab-circles {
 		opacity: 1;
+		transition: 0.5s;
 	}
 
 	.pt-element * {
