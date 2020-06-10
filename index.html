@@ -106,7 +106,7 @@
 
 	.pt-element-label, .tab-circles {
 		opacity: 0;
-		transition: 0.2s;
+		transition: 0.1s;
 	}
 
 	.pt-element.active .pt-element-label, .pt-element.active .tab-circles {
@@ -131,17 +131,60 @@
 		transition: transform 0.5s;
 	}
 
+	@keyframes flip {
+	  from {
+	  	
+	  	/*transform: scaleX(0) translateX(-300%);*/
+        transform: rotateY( 180deg );
+	  	/*transform: scaleX(0);*/
+	  }
+	  to {
+	  	/*left: 0px;*/
+	  	/*transform: scaleX(1) translateX(0%);*/
+        transform: rotateY( 0deg );
+	  }
+	}
+
+	@keyframes flipright {
+	  from {
+	  	z-index: 10;
+	  	/*transform: scaleX(1) translateX(0%);*/
+        transform: rotateY( 0deg );
+	  }
+	  to {
+	  	z-index: 20;
+	  	/*transform: scaleX(0) translateX(100%);*/
+        transform: rotateY( 180deg );
+	  }
+	}
+
 	.pt-element-background {
 		position: absolute;
 		height: 100%;
 		width: 100%;
 	    background-size: cover !important;
 	    background-repeat: no-repeat !important;
-	    opacity: 0;
-	    transition: opacity 0.5s;
+	    /*opacity: 0;*/
+	    transition: opacity 1s;
+	    animation-name: flipright;
+	    animation-duration: 0.75s;
+  		animation-iteration-count: 1;
+  		z-index: 9;
+	  	/*transform: scaleX(1) translateX(-9999px);*/
+        transform: rotateY( 180deg );
+	  	/*animation-timing-function: linear;*/
+              backface-visibility: hidden;
 	}
 	.pt-element-background.active {
-		opacity: 1;
+	    transition: opacity 0.25s;
+		/*opacity: 1;*/
+	  	z-index: 20;
+	    animation-name: flip;
+	    animation-duration: 0.75s;
+  		animation-iteration-count: 1;
+  		/*animation-timing-function: linear;*/
+        transform: rotateY( 0deg );
+	  	/*transform: scaleX(1) translateX(0px);*/
 	}
 
 	.clickable-element a {
@@ -192,7 +235,7 @@
 			ele.onclick = function(e) {
 				ele.classList.toggle("active")
 				intervalFunc && clearInterval(intervalFunc)
-				intervalFunc = setInterval(displayNewTab, 3000);
+				intervalFunc = setInterval(displayNewTab, 4000);
 			};
 		})
 		function displayNewTab() {
@@ -208,10 +251,10 @@
 					}
 					ele.querySelector(`.pt-element-background:nth-child(${newTab})`).classList.toggle("active")
 					ele.setAttribute('tab', newTab)
-					setTimeout(
-						() => {
+					// setTimeout(
+						// () => {
 							ele.querySelector(`.pt-element-background:nth-child(${tab})`).classList.toggle("active")
-					}, 500)
+					// }, 500)
 				})
 			}
 		}
