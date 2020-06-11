@@ -1,3 +1,7 @@
+<html>
+<head></head>
+<body>
+
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
 
 <style type="text/css">
@@ -23,7 +27,7 @@
 		transform: scale(1.5);
 		position: relative;
 		z-index: 100;
-		transition: transform 0.2s;
+		transition: transform 0.3s;
 		transition-timing-function: ease-in-out;
 		cursor: pointer;
 		background: transparent !important;
@@ -34,11 +38,6 @@
 	.pt-table .clickable-element:not(.active):hover {
 		cursor: pointer;
 		transform: scale(1.6);
-	}
-	.pt-table .clickable-element.active {
-		transition: transform 0.5s; 
-		transform: scale(2) translate(-50%, -10%);
-		z-index: 200;
 	}
 	.pt-table .clickable-element.active .tabs {
 		pointer-events: all;
@@ -76,9 +75,14 @@
 	#zn:hover {
 		transform: scale(1.6) translate(22px, 0px);
 	}
+	.pt-table .clickable-element.active {
+		transition: transform 0.5s; 
+		transform: scale(2.5) translate(-31px, -2px) !important;
+		z-index: 200;
+	}
 
 	#cr.active {
-		transform: scale(2) translate(-30px, -30px);
+		transform: scale(2.5) translate(-31px, -2px);
 	}
 	.pt-element .pt-element-symbol {
 		font-family: 'DM Serif Display', serif;
@@ -224,104 +228,110 @@
 		opacity: 0.6;
 	}
 
+	.selected-element-details {
+		text-align: center;
+		position: relative;
+	}
+	.element-menu-item {
+	    font-family: 'DM Serif Display', serif;
+	    list-style: none;
+	    display: inline;
+	    font-size: 26px;
+	    padding: 0px 10px;
+	    opacity: 0.3;
+		border-bottom: 1px solid transparent;
+	    transition: opacity 0.2s, border-bottom 0.2s;
+	    cursor: pointer;
+	}
+	.element-menu-item:hover, .element-menu-item.active {
+		opacity: 1;
+	}
+	.element-menu-item.active {
+		border-bottom: 1px solid black;
+	}
+	.element-details-item {
+	    position: absolute;
+	    width: 100%;
+		opacity: 0;
+		transition: opacity 0.2s;
+	}
+	.element-details-item.active {
+		opacity: 1;
+	}
+	.element-details-item li {
+		list-style: none;
+		font-size: 22px;
+		display: inline;
+		padding: 0px 15px;
+		/*font-style: italic;*/
+	}
+
 </style>
 
 <script>
 	window.onload = () => {
+		let zIndex = 300
 
-		let intervalFunc = null
-		document.querySelectorAll(".pt-element").forEach(ele => {
-			ele.onclick = function(e) {
-				ele.classList.toggle("active")
-				intervalFunc && clearInterval(intervalFunc)
-				intervalFunc = setInterval(displayNewTab, 4000);
-			};
-		})
-		function displayNewTab() {
-			let targets = document.querySelectorAll('.clickable-element.active')
-			if (targets.length === 0 && intervalFunc) clearInterval(intervalFunc)
-			else {
-				targets.forEach(ele => {
-					let tab = parseInt(ele.getAttribute('tab'))
-					let tabLength = parseInt(ele.getAttribute('tab-length'))
-					let newTab = 1
-					if (tab+1 <= tabLength) {
-						newTab = tab + 1
-					}
-					ele.querySelector(`.pt-element-background:nth-child(${newTab})`).classList.toggle("active")
-					ele.setAttribute('tab', newTab)
-					// setTimeout(
-						// () => {
-							ele.querySelector(`.pt-element-background:nth-child(${tab})`).classList.toggle("active")
-					// }, 500)
-				})
+		// let intervalFunc = null
+		document.querySelector(".pt-wrap").onclick = function(e) {
+			console.log("pt-wrap e", e.target)
+			if (!e.target.classList.contains('clickable-element') &&
+				!e.target.classList.contains('tabs') &&
+				!e.target.classList.contains('element-menu-item') &&
+				!e.target.classList.contains('element-details-item-desc') &&
+				!e.target.classList.contains('element-details-item')){
+				document.querySelectorAll('.clickable-element.active').forEach(sEle => sEle.classList.remove("active"))
+				document.querySelectorAll('.element-menu-item.active').forEach(sEle => sEle.classList.remove("active"))
+				document.querySelectorAll('.element-details-item.active').forEach(sEle => sEle.classList.remove("active"))
 			}
 		}
+		
+		document.querySelectorAll(".pt-element").forEach(ele => {
+			ele.onclick = function(e) {
+
+				ele.classList.toggle("active")
+				document.querySelector(`.element-menu-item[ele="${ele.id}"`).classList.toggle("active")
+				document.querySelector(`.element-details-item[ele="${ele.id}"`).classList.toggle("active")
+				ele.style.zIndex = zIndex++
+
+				document.querySelectorAll('.clickable-element.active').forEach(sEle => ele !== sEle && sEle.classList.remove("active"))
+				document.querySelectorAll('.element-menu-item.active').forEach(sEle => ele.id !== sEle.getAttribute('ele') && sEle.classList.remove("active"))
+				document.querySelectorAll('.element-details-item.active').forEach(sEle => ele.id !== sEle.getAttribute('ele') && sEle.classList.remove("active"))
+
+				// intervalFunc && clearInterval(intervalFunc)
+				// intervalFunc = setInterval(displayNewTab, 4000);
+			};
+		})
+		document.querySelectorAll(".element-menu-item").forEach(ele => {
+			ele.onclick = function(e) {
+				document.querySelector(`.pt-element[id="${ele.getAttribute('ele')}"]`).click();
+			};
+		})
+		// function displayNewTab() {
+		// 	let targets = document.querySelectorAll('.clickable-element.active')
+		// 	if (targets.length === 0 && intervalFunc) clearInterval(intervalFunc)
+		// 	else {
+		// 		targets.forEach(ele => {
+		// 			let tab = parseInt(ele.getAttribute('tab'))
+		// 			let tabLength = parseInt(ele.getAttribute('tab-length'))
+		// 			let newTab = 1
+		// 			if (tab+1 <= tabLength) {
+		// 				newTab = tab + 1
+		// 			}
+		// 			ele.querySelector(`.pt-element-background:nth-child(${newTab})`).classList.toggle("active")
+		// 			ele.setAttribute('tab', newTab)
+		// 			// setTimeout(
+		// 				// () => {
+		// 					ele.querySelector(`.pt-element-background:nth-child(${tab})`).classList.toggle("active")
+		// 			// }, 500)
+		// 		})
+		// 	}
+		// }
 	}
 </script>
 
 <main class="pt-wrap" style="padding-top: 50px;">
 <div class="pt-table">
-      <section class="pt-element-desc">
-        <div class="pt-alkali-desc" style="display: none;">
-          <h2>Alkali Metals</h2>
-          <p>The alkali metals form Group I of the periodic table. Their name refers to the alkaline substances that form when these elements react with water. The most common of these elements are sodium and potassium. Rubidium, lithium, and cesium are more rare, making up, in order, 0.03, 0.007, and 0.0007 percent of the Earth’s crust. </p>
-          <p>These elements are very reactive, and usually occur in nature already combined with other elements. They have a silver-like luster, high ductility, and are excellent conductors of electricity and heat. Alkali metals have low melting points, ranging from 28.5° to 179°C.</p>
-        </div>
-        <div class="pt-alkaline-desc" style="display: none;">
-          <h2>Alkaline Earth Metals</h2>
-          <p>Alkaline Earth metals form Group 2 of the periodic table. Except for radium, all of the elements in this group are used in commercial applications. Magnesium and calcium are two of the six most common elements on Earth, and are essential to some geological and biological processes.</p>
-          <p>These elements have a shiny gray-white appearance. They are good conductors of electricity and have higher melting and boiling points than the alkali metals. Melting points range from 650° to 1,287°C and boiling points range from 1,090° to 2,471°C. </p>
-        </div>
-        <div class="pt-nonmetals-desc" style="display: none;">
-          <h2>Nonmetals</h2>
-          <p>Nonmetals include hydrogen, carbon, nitrogen, phosphorus, oxygen, sulfur, selenium, the halogens fluorine, chlorine, bromine, and iodine, and the noble gas elements. Oxygen and other element in this group comprise a large portion of the Earth’s crust. Hydrogen, oxygen, carbon, and nitrogen are elements found in all living organisms. </p>
-          <p>Most atoms of nonmetals are small and have high numbers of electrons, which makes these elements fairly inert and gives them high electronegativities.</p>
-        </div>
-        <div class="pt-transition-metals-desc" style="display: none;">
-          <h2>Transition Metals</h2>
-          <p>A transition metal is defined by IUPAC as "an element whose atom has a partially filled d sub-shell, or which can give rise to cations with an incomplete d sub-shell”. Transition metals are found in Groups 4 through 11of the periodic table; elements in Groups 3 and 12 are sometimes included.</p>
-          <p>Similar to the metals, transition metals are malleable and ductile, conduct heat and electricity, and form positive ions. However, these elements are more electronegative and more likely to form covalent compounds. Transition metals can form useful alloys with other transition or metallic elements.  </p>
-        </div>
-        <div class="pt-post-transition-desc" style="display: none;">
-          <h2>Post-Transition Metals</h2>
-          <p>Post-transition metals are generally considered to be elements in Groups 13, 14, and 15. All of the classifications include the elements gallium, indium, tin, thallium, lead, and bismuth. However, depending on how “post-transition” is defined, this category may contain as few as six or as many as 22 elements. </p>
-          <p>The post-transition metals share many similarities with the metals, including malleability, ductility, and conductivity of heat and electricity, but are usually softer and have lower melting and boiling points than the transition metals. They have poor mechanical strength, form covalent bonds, and display acid-base amphoterism. </p>
-        </div>
-        <div class="pt-lanthanides-desc" style="display: none;">
-          <h2>Lanthanides</h2>
-          <p>Lanthanides make up the 15 metallic chemical elements with atomic numbers 57 through 71. Called lanthanides because they are chemically similar to lanthanum, these elements and the actinides form the category of rare earth elements. Despite this moniker, these chemicals are fairly abundant in the Earth’s crust. For example, cerium is the 25th most abundant element.  </p>
-          <p>Lanthanides oxidize rapidly in moist air, dissolve quickly in acids, and react slowly with oxygen at room temperature. These elements are used in superconductors and hybrid car components, primarily as magnets and batteries. They are also used in the production of specialty glass. </p>
-        </div>
-        <div class="pt-actinides-desc" style="display: none;">
-          <h2>Actinides</h2>
-          <p>The 15 metallic elements with atomic numbers 89 to 104, actinium through lawrencium, are referred to as the actinides. All of these elements are radioactive, relatively unstable, and release energy in the form of radioactive decay. However, they can form stable complexes with ligands, such as chloride, sulfate, carbonate, and acetate.</p>
-          <p>Their radioactivity, toxicity, pyrophoricity, and nuclear criticality make the actinides hazardous to handle. Uranium and plutonium have been used in nuclear plants and in atomic weapons. Some actinides occur naturally in seawater or minerals, but the actinides with atomic numbers 95 to 104 are man-made, created using particle accelerators.</p>
-        </div>
-        <div class="pt-metalloids-desc" style="display: none;">
-          <h2>Metalloids</h2>
-          <p>The most commonly recognized metalloids include boron, silicon, germanium, arsenic, antimony, and tellurium. Their properties are a mixture of or fall between those of metals and nonmetals, and the number of elements included in this category can vary.</p>
-          <p>Metalloids have a shiny appearance like metals, but behave more like non-metals. They have fair electrical conductivity and brittle structures. Chemically, they have intermediate ionization energies and electronegativity values, and form amphoteric or weakly acidic oxides. Metalloids are used in alloys, biological agents, catalysts, flame retardants, glass, optical storage and optoelectronics, pyrotechnics, semiconductors, and electronics. </p>
-        </div>
-        <div class="pt-halogens-desc" style="display: none;">
-          <h2>Halogens</h2>
-          <p>Halogens are the non-metallic elements found in group 17 of the periodic table: and include fluorine, chlorine, bromine, iodine, and astatine. They are the only group whose elements at room temperature include solid, liquid, and gas forms of matter. When halogens react with metals, they produce a range of useful salts, including calcium fluoride, sodium chloride, silver bromide, and potassium iodide. </p>
-          <p>Since halogens are one electron short of having full shells, they can combine with many different elements. They are highly reactive and can be lethal in concentrated amounts. Commercially, halogens are used in disinfectants, lighting, and drug components.</p>
-        </div>
-        <div class="pt-nobel-desc" style="display: none;">
-          <h2>Noble Gases</h2>
-          <p>The noble gases form Group 18 for the first six periods of the periodic table. They’re colorless, odorless, tasteless, and nonflammable. It was originally believed that their atoms could not bond to other elements or form chemical compounds, but that has since been disproven.</p>
-          <p>Several of these gases are considered very abundant on earth, and all are present in the Earth’s atmosphere. Except for helium and radon, noble gases can be extracted from the air using liquefaction and fractional distillation. Helium is obtained from natural gas wells and radon is a product of radioactive decay.</p>
-        </div>
-        <div class="pt-groups-desc" style="display: none;">
-          <h2>Groups</h2>
-          <p>When Dmitri Mendeleev created the periodic table in the late 19th century, he grouped elements by atomic weight. When grouped by weight, the behavior of the elements appeared to occur in regular intervals or periods. The columns of the modern periodic table represent groups of elements and rows represent the periods. The groups are numbered one through 18. Elements in the same group can be expected to behave in a similar way because they have the same number of electrons in their outermost shell. </p>
-        </div>
-        <div class="pt-periods-desc" style="display: none;">
-          <h2>Periods</h2>
-          <p>Although elements in the same row or period have number of electron shells in common, the properties of the elements are more closely related to the group (vertical columns) to which they belong.</p>
-        </div>
-      </section><!-- /element-desc -->
       <section class="pt-element pt-nonmetal pt-gas g1 p1" id="h">
         <a href="#h1">
           <div class="pt-element-number">1</div>
@@ -425,6 +435,9 @@
           <div class="pt-element-name">Aluminum</div>
           <p class="pt-element-weight">26.98</p>
         </a>
+        <div class="tabs">
+        	<div class="pt-element-background active" style="background: url(aluminium.JPG);"></div>
+        </div>
       </section>
       <section class="pt-element pt-semimetal pt-metalloids pt-solid g14 p3" id="si">
         <a href="#si14">
@@ -515,28 +528,12 @@
         </a>
         <div class="tabs">
         	<div class="pt-element-background active" style="background: url(p02.jpg);">
-        		<div class="tab-circles">
+        		<!--<div class="tab-circles">
         			<div class="transparent-circle"></div>
         			<div class="transparent-circle"></div>
         			<div class="circle"></div>
         		</div>
-        		<div class="pt-element-label">ROM</div>
-        	</div>
-        	<div class="pt-element-background" style="background: url(manganese.jpg);">
-        		<div class="tab-circles">
-        			<div class="transparent-circle"></div>
-        			<div class="circle"></div>
-        			<div class="transparent-circle"></div>
-        		</div>
-        		<div class="pt-element-label">Concentrate</div>
-        	</div>
-        	<div class="pt-element-background" style="background: url(nickel.jpg);">
-        		<div class="tab-circles">
-        			<div class="circle"></div>
-        			<div class="transparent-circle"></div>
-        			<div class="transparent-circle"></div>
-        		</div>
-        		<div class="pt-element-label">Lumpy</div>
+        		<div class="pt-element-label">ROM</div>-->
         	</div>
         </div>
       </section>
@@ -547,6 +544,9 @@
           <div class="pt-element-name">Manganese</div>
           <div class="pt-element-weight">54.94</div>
         </a>
+        <div class="tabs">
+        	<div class="pt-element-background active" style="background: url(manganese.jpg);"></div>
+        </div>
       </section>
       <section class="pt-element pt-transition pt-solid g8 p4" id="fe">
         <a href="#fe26">
@@ -571,6 +571,9 @@
           <div class="pt-element-name">Nickel</div>
           <div class="pt-element-weight">58.69</div>
         </a>
+        <div class="tabs">
+        	<div class="pt-element-background active" style="background: url(nickel.jpg);"></div>
+        </div>
       </section>
       <section class="clickable-element pt-element pt-transition pt-solid g11 p4" id="cu">
         <a class="element-box" href="#cu29">
@@ -579,6 +582,9 @@
           <div class="pt-element-name">Copper</div>
           <div class="pt-element-weight">63.55</div>
         </a>
+        <div class="tabs">
+        	<div class="pt-element-background active" style="background: url(cathode.JPG);"></div>
+        </div>
       </section>
       <section class="clickable-element pt-element pt-transition pt-solid g12 p4" id="zn">
         <a class="element-box" href="#zn30">
@@ -587,6 +593,9 @@
           <div class="pt-element-name">Zinc</div>
           <div class="pt-element-weight">65.38</div>
         </a>
+        <div class="tabs">
+        	<div class="pt-element-background active" style="background: url(zinc.JPG);"></div>
+        </div>
       </section>
       <section class="pt-element pt-basic pt-post-transition pt-solid g13 p4" id="ga">
         <a href="#ga31">
@@ -1003,6 +1012,9 @@
           <div class="pt-element-name">Lead</div>
           <div class="pt-element-weight">207.2</div>
         </a>
+        <div class="tabs">
+        	<div class="pt-element-background active" style="background: url(lead.JPG);"></div>
+        </div>
       </section>
       <section class="pt-element pt-basic pt-post-transition pt-solid g15 p6" id="bi">
         <a href="#bi83">
@@ -1309,4 +1321,55 @@
         </div>
       </section>
     </div>
+	<div class="selected-element-details">
+		<ul>
+			<li class="element-menu-item" ele="cr">Cr</li>
+			<li class="element-menu-item" ele="mn">Mn</li>
+			<li class="element-menu-item" ele="ni">Ni</li>
+			<li class="element-menu-item" ele="cu">Cu</li>
+			<li class="element-menu-item" ele="zn">Zn</li>
+			<li class="element-menu-item" ele="al">Al</li>
+			<li class="element-menu-item" ele="pb">Pb</li>
+		</ul>
+		<ul class="element-details-item" ele="cr">
+			<li class="element-details-item-desc">ROM</li>
+			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc">Concentrate</li>
+			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc">Lumpy</li>
+		</ul>
+		<ul class="element-details-item" ele="mn">
+			<li class="element-details-item-desc">Lumpy Ore</li>
+			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc">Chips</li>
+		</ul>
+		<ul class="element-details-item" ele="ni">
+			<li class="element-details-item-desc">Primary Nickel (99.80%)</li>
+			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc">Briquettes</li>
+		</ul>
+		<ul class="element-details-item" ele="cu">
+			<li class="element-details-item-desc">LME Registered Grade A Cathodes</li>
+			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc">Non LME Registered Cathodes</li>
+			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc">Concentrates (16%+ Cu)</li>
+		</ul>
+		<ul class="element-details-item" ele="zn">
+			<li class="element-details-item-desc">SHG Ingots</li>
+			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc">Concentrates (45% +Zn)</li>
+		</ul>
+		<ul class="element-details-item" ele="al">
+			<li class="element-details-item-desc">P1020 (99.7%)</li>
+			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc">Ingots and Sows</li>
+		</ul>
+		<ul class="element-details-item" ele="pb">
+			<li class="element-details-item-desc">Concentrates (45% +Pb)</li>
+		</ul>
+	</div>
 </main>
+
+</body>
+</html>
