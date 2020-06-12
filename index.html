@@ -1,11 +1,1634 @@
 <html>
-<head></head>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
 <body>
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
 
 <style type="text/css">
-	body{margin:0;min-height:100vh;font-family:'Helvetica Neue',Helvetica,Arial}body *{-webkit-box-sizing:border-box;box-sizing:border-box}.pt-wrap{-webkit-box-sizing:border-box!important;box-sizing:border-box!important;margin:0 auto!important;min-height:100vh!important;font-family:'Helvetica Neue',Helvetica,Arial!important}.pt-wrap h1{margin-top:0!important;padding-bottom:.5rem!important;border-bottom:.125rem solid rgba(0,0,0,0.5)!important}.pt-wrap p{margin:0 0 20px}.pt-wrap img{width:auto;max-width:100%;height:auto}.pt-text-center{text-align:center}.pt-text-right{text-align:right}main.pt-wrap{margin:20px auto;width:100%;max-width:1200px;padding:0}main.pt-wrap .pt-table{display:-ms-grid;display:grid;margin-bottom:20px;-ms-grid-columns:auto;grid-template-columns:auto;-ms-grid-rows:68px 68px 68px 68px 68px 68px 68px 40px 68px 68px;grid-template-rows:68px 68px 68px 68px 68px 68px 68px 40px 68px 68px}main.pt-wrap .pt-table > :nth-child(1){-ms-grid-row:1;-ms-grid-column:1}main.pt-wrap .pt-table > :nth-child(2){-ms-grid-row:2;-ms-grid-column:1}main.pt-wrap .pt-table > :nth-child(3){-ms-grid-row:3;-ms-grid-column:1}main.pt-wrap .pt-table > :nth-child(4){-ms-grid-row:4;-ms-grid-column:1}main.pt-wrap .pt-table > :nth-child(5){-ms-grid-row:5;-ms-grid-column:1}main.pt-wrap .pt-table > :nth-child(6){-ms-grid-row:6;-ms-grid-column:1}main.pt-wrap .pt-table > :nth-child(7){-ms-grid-row:7;-ms-grid-column:1}main.pt-wrap .pt-table > :nth-child(8){-ms-grid-row:8;-ms-grid-column:1}main.pt-wrap .pt-table > :nth-child(9){-ms-grid-row:9;-ms-grid-column:1}main.pt-wrap .pt-table > :nth-child(10){-ms-grid-row:10;-ms-grid-column:1}.pt-intro-copy{width:70%;float:left;}.pt-social{width:30%;float:right;}.pt-social p{margin:0;vertical-align:middle}.pt-social img{color:#555759;font-size:14px;text-decoration:none;margin-left:7px;display:inline-block}.pt-social img:hover{cursor:pointer}.pt-social .pt-social-download{color:#555759;font-size:14px;text-decoration:none}.pt-social img{display:inline-block;vertical-align:middle}.pt-element{position:relative;background:rgba(0,0,0,0.25);padding:.25rem;margin:2px}.pt-inner .pt-element{width:150px;height:150px;padding:.5rem}.pt-table{-ms-grid-columns:62px;grid-template-columns:62px;-ms-grid-rows:62px;grid-template-rows:62px}.pt-table > :nth-child(1){-ms-grid-row:1;-ms-grid-column:1}.pt-table .pt-element{width:62px;height:62px}.pt-element a{color:#fff;text-decoration:none;display:block}.pt-element .pt-element-number,.pt-element .pt-element-symbol,.pt-element .pt-element-name,.pt-element .pt-element-weight{color:#fff;line-height:1}.pt-element .pt-element-number{font-size:13px;text-align:right;margin-bottom:12px;float:right;display:inline-block}.pt-inner .pt-element .pt-element-number{font-size:30px}.pt-element .pt-element-symbol{font-size:20px;font-weight:400;margin:0;float:left;display:inline-block}.pt-inner .pt-element .pt-element-symbol{font-size:55px}.pt-element .pt-element-name{font-size:8px;margin-bottom:3px;clear:both}.pt-inner .pt-element .pt-element-name{font-size:12px;position:absolute;bottom:25px}.pt-element .pt-element-weight{font-size:11px}.pt-inner .pt-element .pt-element-weight{position:absolute;bottom:10px}.pt-table-filters .pt-element:hover{z-index:2;cursor:pointer}.pt-table-filters .pt-element:hover,.pt-filter-hide .pt-element:hover{background-color:#005daa;color:#fff}.pt-element.pt-key{background-color:#F5F6F8;position:relative;border:1px solid #BEBBBB;width:auto;height:auto}.pt-element.pt-key:hover{cursor:default;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}.pt-element .pt-key-title{color:#555759;font-size:14px;font-weight:700;position:absolute;top:-20px;left:0}.pt-element .pt-key-info img{margin:0 auto;display:block;position:absolute;top:50%;-webkit-transform:translate(0,-50%);-ms-transform:translate(0,-50%);transform:translate(0,-50%)}.pt-element.pt-color-guide,.pt-group-filter{background-color:transparent;color:#555759;font-size:15px;font-weight:400;line-height:1;text-align:center;padding:7px 20px;border:1px solid #555759;border-radius:4px}.pt-element.pt-color-guide:hover,.pt-group-filter:hover{cursor:pointer}.pt-group-filter:focus{outline:none}.pt-element.pt-color-guide.pt-active,.pt-group-filter.pt-active{background-color:#555759;color:#fff}.pt-element.pt-color-guide.pt-active:hover,.pt-group-filter.pt-active:hover{background-color:#6e7175}.pt-table .pt-alkali,.pt-inner .pt-alkali{background:#0ABCDE}.pt-table .pt-alkaline,.pt-inner .pt-alkaline{background:#00548B}.pt-table .pt-transition,.pt-inner .pt-transition{background:#3A3B3C}.pt-table .pt-basic,.pt-inner .pt-basic{background:#ED7700}.pt-table .pt-semimetal,.pt-inner .pt-semimetal{background:#AD1E2D}.pt-table .pt-nonmetal,.pt-inner .pt-nonmetal{background:#522D6D}.pt-table .pt-halogen,.pt-inner .pt-halogen{background:#7474C1}.pt-table .pt-noble,.pt-inner .pt-noble{background:#693DE2}.pt-table .pt-lanthanide,.pt-inner .pt-lanthanide{background:#005DAA}.pt-table .pt-actinide,.pt-inner .pt-actinide{background:#32D801}.pt-table .pt-not-selected{background:#e6e6e6}.pt-not-selected .pt-element-number,.pt-not-selected .pt-element-symbol,.pt-not-selected .pt-element-name,.pt-not-selected .pt-element-weight{color:#e6e6e6!important}.pt-table .pt-selected{opacity:1!important}.pt-table .pt-element-desc{padding:20px 35px;-ms-grid-row:4;-ms-grid-row-span:-3;-ms-grid-column:13;-ms-grid-column-span:-10;grid-area:4/13/1/3}.pt-table .pt-element-desc h2{color:#555759;font-size:20px;font-weight:700;line-height:1.03;margin-bottom:10px}.pt-table .pt-element-desc p{color:#555759;font-size:12px;margin-bottom:20px}.pt-table-filters{background-color:#F5F6F8;margin-bottom:10px;padding:13px 30px;border:1px solid #BEBBBB}.pt-filter-title{margin-right:25px;float:left;}.pt-filter-title p{margin:4px 0 0}.pt-filter-title img{display:inline-block;vertical-align:middle}.pt-filter-hide{width:100%;margin-left:100px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.pt-filter-hide .pt-color-guide{display:none}.pt-filter-hide .pt-element{margin-top:10px}#cg-all{margin-right:25px;position:relative}#cg-all::after{content:'';width:25px;height:25px;display:block;border-right:1px solid #BEBBBB;position:absolute;right:-18px;top:0}#cg-nonmetals{margin-right:25px;position:relative}#cg-nonmetals::after{content:'';width:25px;height:25px;display:block;border-right:1px solid #BEBBBB;position:absolute;right:-18px;top:0}#cg-states{margin-right:25px;position:relative}#cg-states::after{content:'';width:25px;height:25px;display:block;border-right:1px solid #BEBBBB;position:absolute;right:-18px;top:0}button#pt-reset{background:none;color:#555759;font-size:14px;margin:5px 0 0 100px;padding:0;clear:both;border:none}button#pt-reset:hover{cursor:pointer}button#pt-reset:focus{outline:none}#h{-ms-grid-row:1;-ms-grid-column:1;grid-area:1/1/1/1}#he{-ms-grid-row:1;-ms-grid-column:18;grid-area:1/18/1/18}#li{-ms-grid-row:2;-ms-grid-column:1;grid-area:2/1/2/1}#be{-ms-grid-row:2;-ms-grid-column:2;grid-area:2/2/2/2}#b{-ms-grid-row:2;-ms-grid-column:13;grid-area:2/13/2/13}#c{-ms-grid-row:2;-ms-grid-column:14;grid-area:2/14/2/14}#n{-ms-grid-row:2;-ms-grid-column:15;grid-area:2/15/2/15}#o{-ms-grid-row:2;-ms-grid-column:16;grid-area:2/16/2/16}#f{-ms-grid-row:2;-ms-grid-column:17;grid-area:2/17/2/17}#ne{-ms-grid-row:2;-ms-grid-column:18;grid-area:2/18/2/18}#na{-ms-grid-row:3;-ms-grid-column:1;grid-area:3/1/3/1}#mg{-ms-grid-row:3;-ms-grid-column:2;grid-area:3/2/3/2}#al{-ms-grid-row:3;-ms-grid-column:13;grid-area:3/13/3/13}#si{-ms-grid-row:3;-ms-grid-column:14;grid-area:3/14/3/14}#p{-ms-grid-row:3;-ms-grid-column:15;grid-area:3/15/3/15}#s{-ms-grid-row:3;-ms-grid-column:16;grid-area:3/16/3/16}#cl{-ms-grid-row:3;-ms-grid-column:17;grid-area:3/17/3/17}#ar{-ms-grid-row:3;-ms-grid-column:18;grid-area:3/18/3/18}#k{-ms-grid-row:4;-ms-grid-column:1;grid-area:4/1/4/1}#ca{-ms-grid-row:4;-ms-grid-column:2;grid-area:4/2/4/2}#sc{-ms-grid-row:4;-ms-grid-column:3;grid-area:4/3/4/3}#ti{-ms-grid-row:4;-ms-grid-column:4;grid-area:4/4/4/4}#v{-ms-grid-row:4;-ms-grid-column:5;grid-area:4/5/4/5}#cr{-ms-grid-row:4;-ms-grid-column:6;grid-area:4/6/4/6}#mn{-ms-grid-row:4;-ms-grid-column:7;grid-area:4/7/4/7}#fe{-ms-grid-row:4;-ms-grid-column:8;grid-area:4/8/4/8}#co{-ms-grid-row:4;-ms-grid-column:9;grid-area:4/9/4/9}#ni{-ms-grid-row:4;-ms-grid-column:10;grid-area:4/10/4/10}#cu{-ms-grid-row:4;-ms-grid-column:11;grid-area:4/11/4/11}#zn{-ms-grid-row:4;-ms-grid-column:12;grid-area:4/12/4/12}#ga{-ms-grid-row:4;-ms-grid-column:13;grid-area:4/13/4/13}#ge{-ms-grid-row:4;-ms-grid-column:14;grid-area:4/14/4/14}#as{-ms-grid-row:4;-ms-grid-column:15;grid-area:4/15/4/15}#se{-ms-grid-row:4;-ms-grid-column:16;grid-area:4/16/4/16}#br{-ms-grid-row:4;-ms-grid-column:17;grid-area:4/17/4/17}#kr{-ms-grid-row:4;-ms-grid-column:18;grid-area:4/18/4/18}#rb{-ms-grid-row:5;-ms-grid-column:1;grid-area:5/1/5/1}#sr{-ms-grid-row:5;-ms-grid-column:2;grid-area:5/2/5/2}#y{-ms-grid-row:5;-ms-grid-column:3;grid-area:5/3/5/3}#zr{-ms-grid-row:5;-ms-grid-column:4;grid-area:5/4/5/4}#nb{-ms-grid-row:5;-ms-grid-column:5;grid-area:5/5/5/5}#mo{-ms-grid-row:5;-ms-grid-column:6;grid-area:5/6/5/6}#tc{-ms-grid-row:5;-ms-grid-column:7;grid-area:5/7/5/7}#ru{-ms-grid-row:5;-ms-grid-column:8;grid-area:5/8/5/8}#rh{-ms-grid-row:5;-ms-grid-column:9;grid-area:5/9/5/9}#pd{-ms-grid-row:5;-ms-grid-column:10;grid-area:5/10/5/10}#ag{-ms-grid-row:5;-ms-grid-column:11;grid-area:5/11/5/11}#cd{-ms-grid-row:5;-ms-grid-column:12;grid-area:5/12/5/12}#in{-ms-grid-row:5;-ms-grid-column:13;grid-area:5/13/5/13}#sn{-ms-grid-row:5;-ms-grid-column:14;grid-area:5/14/5/14}#sb{-ms-grid-row:5;-ms-grid-column:15;grid-area:5/15/5/15}#te{-ms-grid-row:5;-ms-grid-column:16;grid-area:5/16/5/16}#i{-ms-grid-row:5;-ms-grid-column:17;grid-area:5/17/5/17}#xe{-ms-grid-row:5;-ms-grid-column:18;grid-area:5/18/5/18}#cs{-ms-grid-row:6;-ms-grid-column:1;grid-area:6/1/6/1}#ba{-ms-grid-row:6;-ms-grid-column:2;grid-area:6/2/6/2}#hf{-ms-grid-row:6;-ms-grid-column:4;grid-area:6/4/6/4}#ta{-ms-grid-row:6;-ms-grid-column:5;grid-area:6/5/6/5}#w{-ms-grid-row:6;-ms-grid-column:6;grid-area:6/6/6/6}#re{-ms-grid-row:6;-ms-grid-column:7;grid-area:6/7/6/7}#os{-ms-grid-row:6;-ms-grid-column:8;grid-area:6/8/6/8}#ir{-ms-grid-row:6;-ms-grid-column:9;grid-area:6/9/6/9}#pt{-ms-grid-row:6;-ms-grid-column:10;grid-area:6/10/6/10}#au{-ms-grid-row:6;-ms-grid-column:11;grid-area:6/11/6/11}#hg{-ms-grid-row:6;-ms-grid-column:12;grid-area:6/12/6/12}#tl{-ms-grid-row:6;-ms-grid-column:13;grid-area:6/13/6/13}#pb{-ms-grid-row:6;-ms-grid-column:14;grid-area:6/14/6/14}#bi{-ms-grid-row:6;-ms-grid-column:15;grid-area:6/15/6/15}#po{-ms-grid-row:6;-ms-grid-column:16;grid-area:6/16/6/16}#at{-ms-grid-row:6;-ms-grid-column:17;grid-area:6/17/6/17}#rn{-ms-grid-row:6;-ms-grid-column:18;grid-area:6/18/6/18}#fr{-ms-grid-row:7;-ms-grid-column:1;grid-area:7/1/7/1}#ra{-ms-grid-row:7;-ms-grid-column:2;grid-area:7/2/7/2}#rf{-ms-grid-row:7;-ms-grid-column:4;grid-area:7/4/7/4}#db{-ms-grid-row:7;-ms-grid-column:5;grid-area:7/5/7/5}#sg{-ms-grid-row:7;-ms-grid-column:6;grid-area:7/6/7/6}#bh{-ms-grid-row:7;-ms-grid-column:7;grid-area:7/7/7/7}#hs{-ms-grid-row:7;-ms-grid-column:8;grid-area:7/8/7/8}#mt{-ms-grid-row:7;-ms-grid-column:9;grid-area:7/9/7/9}#ds{-ms-grid-row:7;-ms-grid-column:10;grid-area:7/10/7/10}#rg{-ms-grid-row:7;-ms-grid-column:11;grid-area:7/11/7/11}#cn{-ms-grid-row:7;-ms-grid-column:12;grid-area:7/12/7/12}#nh{-ms-grid-row:7;-ms-grid-column:13;grid-area:7/13/7/13}#fl{-ms-grid-row:7;-ms-grid-column:14;grid-area:7/14/7/14}#mc{-ms-grid-row:7;-ms-grid-column:15;grid-area:7/15/7/15}#lv{-ms-grid-row:7;-ms-grid-column:16;grid-area:7/16/7/16}#ts{-ms-grid-row:7;-ms-grid-column:17;grid-area:7/17/7/17}#og{-ms-grid-row:7;-ms-grid-column:18;grid-area:7/18/7/18}#la{-ms-grid-row:9;-ms-grid-column:4;grid-area:9/4/9/4}#ce{-ms-grid-row:9;-ms-grid-column:5;grid-area:9/5/9/5}#pr{-ms-grid-row:9;-ms-grid-column:6;grid-area:9/6/9/6}#nd{-ms-grid-row:9;-ms-grid-column:7;grid-area:9/7/9/7}#pm{-ms-grid-row:9;-ms-grid-column:8;grid-area:9/8/9/8}#sm{-ms-grid-row:9;-ms-grid-column:9;grid-area:9/9/9/9}#eu{-ms-grid-row:9;-ms-grid-column:10;grid-area:9/10/9/10}#gd{-ms-grid-row:9;-ms-grid-column:11;grid-area:9/11/9/11}#tb{-ms-grid-row:9;-ms-grid-column:12;grid-area:9/12/9/12}#dy{-ms-grid-row:9;-ms-grid-column:13;grid-area:9/13/9/13}#ho{-ms-grid-row:9;-ms-grid-column:14;grid-area:9/14/9/14}#er{-ms-grid-row:9;-ms-grid-column:15;grid-area:9/15/9/15}#tm{-ms-grid-row:9;-ms-grid-column:16;grid-area:9/16/9/16}#yb{-ms-grid-row:9;-ms-grid-column:17;grid-area:9/17/9/17}#lu{-ms-grid-row:9;-ms-grid-column:18;grid-area:9/18/9/18}#ac{-ms-grid-row:10;-ms-grid-column:4;grid-area:10/4/10/4}#th{-ms-grid-row:10;-ms-grid-column:5;grid-area:10/5/10/5}#pa{-ms-grid-row:10;-ms-grid-column:6;grid-area:10/6/10/6}#u{-ms-grid-row:10;-ms-grid-column:7;grid-area:10/7/10/7}#np{-ms-grid-row:10;-ms-grid-column:8;grid-area:10/8/10/8}#pu{-ms-grid-row:10;-ms-grid-column:9;grid-area:10/9/10/9}#am{-ms-grid-row:10;-ms-grid-column:10;grid-area:10/10/10/10}#cm{-ms-grid-row:10;-ms-grid-column:11;grid-area:10/11/10/11}#bk{-ms-grid-row:10;-ms-grid-column:12;grid-area:10/12/10/12}#cf{-ms-grid-row:10;-ms-grid-column:13;grid-area:10/13/10/13}#es{-ms-grid-row:10;-ms-grid-column:14;grid-area:10/14/10/14}#fm{-ms-grid-row:10;-ms-grid-column:15;grid-area:10/15/10/15}#md{-ms-grid-row:10;-ms-grid-column:16;grid-area:10/16/10/16}#no{-ms-grid-row:10;-ms-grid-column:17;grid-area:10/17/10/17}#lr{-ms-grid-row:10;-ms-grid-column:18;grid-area:10/18/10/18}#cg-alkali{-ms-grid-row:1;-ms-grid-column:1;grid-area:1/1/1/1}#cg-alkaline{-ms-grid-row:1;-ms-grid-column:2;grid-area:1/2/1/2}#cg-transition{-ms-grid-row:1;-ms-grid-column:3;grid-area:1/3/1/3}#cg-basic{-ms-grid-row:1;-ms-grid-column:4;grid-area:1/4/1/4}#cg-semimetal{-ms-grid-row:1;-ms-grid-column:5;grid-area:1/5/1/5}#cg-nonmetal{-ms-grid-row:1;-ms-grid-column:6;grid-area:1/6/1/6}#cg-halogen{-ms-grid-row:1;-ms-grid-column:7;grid-area:1/7/1/7}#cg-noble{-ms-grid-row:1;-ms-grid-column:8;grid-area:1/8/1/8}#cg-lanthanide{-ms-grid-row:1;-ms-grid-column:9;grid-area:1/9/1/9}#cg-actinide{-ms-grid-row:1;-ms-grid-column:10;grid-area:1/10/1/10}#lan{-ms-grid-row:6;-ms-grid-column:3;grid-area:6/3/6/3}#act{-ms-grid-row:7;-ms-grid-column:3;grid-area:7/3/7/3}#key{-ms-grid-row:9;-ms-grid-row-span:2;-ms-grid-column:1;-ms-grid-column-span:3;grid-area:9/1/11/4}.pt-accordion{list-style:none;margin:0;padding:0}.pt-accordion .pt-inner{background-color:#F4F4F4;margin:0;padding:25px;overflow:hidden;display:none}.pt-accordion li:nth-child(even) .pt-inner{background-color:#e6e6e6}.pt-accordion li:nth-child(odd) .pt-inner{background-color:#d6d6d6}.pt-accordion .pt-inner:target{display:block}.pt-accordion li{margin:0;display:block}.pt-accordion p{color:#565757}.pt-accordion li a.pt-toggle{background-color:#d6d6d6;width:100%;padding:20px;display:block;-webkit-transition:background .3s ease;-o-transition:background .3s ease;transition:background .3s ease;position:relative}.pt-accordion li a.pt-toggle::before{background:url(https://beta-static.fishersci.com/content/dam/fishersci/en_US/images/periodic-table/ico-down.png) right center no-repeat transparent;background-size:14px;content:'';width:14%;height:17px;float:right;display:inline-block}.pt-accordion li.pt-active-ico a.pt-toggle::before{background:url(https://beta-static.fishersci.com/content/dam/fishersci/en_US/images/periodic-table/ico-up.png) right center no-repeat transparent;background-size:14px}.pt-accordion li:nth-child(even) a.pt-toggle{background-color:#e6e6e6}.pt-accordion li a.pt-toggle:hover{background:rgba(0,0,0,.15);cursor:pointer}.pt-accordion .pt-toggle p{margin-bottom:0}.pt-col-one-key{width:33%;float:left;display:inline-block}.pt-col-two-key{width:33%;float:left;display:inline-block}.pt-col-three-key{width:20%;float:left;display:inline-block}.pt-col-three-key p{text-align:right}.pt-col-third{width:33.3333%;float:left;display:inline-block}.pt-col-atomic{width:24%}.pt-col-symbol p{text-align:center}.pt-table-search{position:relative}.pt-to-top{background-color:#A2A4AA;text-align:right;width:100%;max-width:1200px;margin:0 auto;padding:15px 30px;position:fixed;right:0;bottom:0;left:0}.pt-to-top a{color:#fff;font-size:16px;text-decoration:none}.pt-to-top img{height:15px;display:inline-block}.pt-search-box{padding:.75em .75em .75em 0}.pt-search-box p{color:#555759;font-size:14px;margin-bottom:10px}.pt-search-box input[type="text"]{font-size:15px;width:100%;max-width:300px;padding:7px 15px}.pt-search-box input[type="text"]::-webkit-input-placeholder{color:#c4c3c3}.pt-search-box input[type="text"]::-moz-placeholder{color:#c4c3c3}.pt-search-box input[type="text"]:-ms-input-placeholder{color:#c4c3c3}.pt-search-box input[type="text"]::-ms-input-placeholder{color:#c4c3c3}.pt-search-box input[type="text"]::placeholder{color:#c4c3c3}#pt-search-table{margin-bottom:48px}.pt-search-table-key{background-color:#727272;padding:20px}.pt-search-table-key p{color:#fff;margin-bottom:0}.pt-col-element{width:15%;margin-right:1.3333%;float:left}.pt-col-desc{width:43%;margin-right:3.3333%;float:left}.pt-col-detail{width:32%;float:left}.pt-table-mobile{display:none}@media (max-width: 1040px){.pt-col-desc{width:75%;margin-right:0;margin-left:3%}.pt-col-detail{margin-left:19.3333%}}@media (max-width: 885px){.pt-table-filters,.pt-table{display:none!important}.pt-table-mobile{display:block}.pt-col-desc{width:75%;margin-right:0;margin-left:6%}.pt-col-detail{margin-left:22.3333%}.pt-intro-copy{width:100%;float:none;display:block}.pt-social{width:100%;float:none;display:block}.pt-social .pt-text-right{text-align:center;margin-bottom:20px}.pt-to-top{text-align:center}}@media (max-width: 788px){.pt-col-element{margin-bottom:20px}.pt-col-desc{width:100%;margin-left:0}.pt-col-detail{width:100%;margin-left:0}}.pt-group:after,.pt-table .pt-section.pt-element:after{content:"";display:table;clear:both}
+	body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: 'Helvetica Neue', Helvetica, Arial
+}
+
+body * {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+.container {
+	-webkit-box-sizing: border-box!important;
+	box-sizing: border-box!important;
+	margin: 0 auto!important;
+	min-height: 100vh!important;
+	font-family: 'Helvetica Neue', Helvetica, Arial!important
+}
+
+.container h1 {
+	margin-top: 0!important;
+	padding-bottom: .5rem!important;
+	border-bottom: .125rem solid rgba(0, 0, 0, 0.5)!important
+}
+
+.container p {
+	margin: 0 0 20px
+}
+
+.container img {
+	width: auto;
+	max-width: 100%;
+	height: auto
+}
+
+.pt-text-center {
+	text-align: center
+}
+
+.pt-text-right {
+	text-align: right
+}
+
+main.container {
+	margin: 20px auto;
+	width: 100%;
+	max-width: 1200px;
+	padding: 0;
+	overflow: hidden;
+}
+
+main.container .pt-table {
+	display: -ms-grid;
+	display: grid;
+	margin-bottom: 20px;
+	-ms-grid-columns: auto;
+	grid-template-columns: auto;
+	-ms-grid-rows: 68px 68px 68px 68px 68px 68px 68px 40px 68px 68px;
+	grid-template-rows: 68px 68px 68px 68px 68px 68px 68px 40px 68px 68px;
+}
+
+main.container .pt-table> :nth-child(1) {
+	-ms-grid-row: 1;
+	-ms-grid-column: 1
+}
+
+main.container .pt-table> :nth-child(2) {
+	-ms-grid-row: 2;
+	-ms-grid-column: 1
+}
+
+main.container .pt-table> :nth-child(3) {
+	-ms-grid-row: 3;
+	-ms-grid-column: 1
+}
+
+main.container .pt-table> :nth-child(4) {
+	-ms-grid-row: 4;
+	-ms-grid-column: 1
+}
+
+main.container .pt-table> :nth-child(5) {
+	-ms-grid-row: 5;
+	-ms-grid-column: 1
+}
+
+main.container .pt-table> :nth-child(6) {
+	-ms-grid-row: 6;
+	-ms-grid-column: 1
+}
+
+main.container .pt-table> :nth-child(7) {
+	-ms-grid-row: 7;
+	-ms-grid-column: 1
+}
+
+main.container .pt-table> :nth-child(8) {
+	-ms-grid-row: 8;
+	-ms-grid-column: 1
+}
+
+main.container .pt-table> :nth-child(9) {
+	-ms-grid-row: 9;
+	-ms-grid-column: 1
+}
+
+main.container .pt-table> :nth-child(10) {
+	-ms-grid-row: 10;
+	-ms-grid-column: 1
+}
+
+.pt-intro-copy {
+	width: 70%;
+	float: left;
+}
+
+.pt-social {
+	width: 30%;
+	float: right;
+}
+
+.pt-social p {
+	margin: 0;
+	vertical-align: middle
+}
+
+.pt-social img {
+	color: #555759;
+	font-size: 14px;
+	text-decoration: none;
+	margin-left: 7px;
+	display: inline-block
+}
+
+.pt-social img:hover {
+	cursor: pointer
+}
+
+.pt-social .pt-social-download {
+	color: #555759;
+	font-size: 14px;
+	text-decoration: none
+}
+
+.pt-social img {
+	display: inline-block;
+	vertical-align: middle
+}
+
+.pt-element {
+	position: relative;
+	background: rgba(0, 0, 0, 0.25);
+	padding: .25rem;
+	margin: 2px
+}
+
+.pt-inner .pt-element {
+	width: 150px;
+	height: 150px;
+	padding: .5rem
+}
+
+.pt-table {
+	-ms-grid-columns: 62px;
+	grid-template-columns: 62px;
+	-ms-grid-rows: 62px;
+	grid-template-rows: 62px
+}
+
+.pt-table> :nth-child(1) {
+	-ms-grid-row: 1;
+	-ms-grid-column: 1
+}
+
+.pt-table .pt-element {
+	width: 62px;
+	height: 62px
+}
+
+.pt-element a {
+	color: #fff;
+	text-decoration: none;
+	display: block
+}
+
+.pt-element .pt-element-number,
+.pt-element .pt-element-symbol,
+.pt-element .pt-element-name,
+.pt-element .pt-element-weight {
+	color: #fff;
+	line-height: 1
+}
+
+.pt-element .pt-element-number {
+	font-size: 13px;
+	text-align: right;
+	margin-bottom: 12px;
+	float: right;
+	display: inline-block
+}
+
+.pt-inner .pt-element .pt-element-number {
+	font-size: 30px
+}
+
+.pt-element .pt-element-symbol {
+	font-size: 20px;
+	font-weight: 400;
+	margin: 0;
+	float: left;
+	display: inline-block
+}
+
+.pt-inner .pt-element .pt-element-symbol {
+	font-size: 55px
+}
+
+.pt-element .pt-element-name {
+	font-size: 8px;
+	margin-bottom: 3px;
+	clear: both
+}
+
+.pt-inner .pt-element .pt-element-name {
+	font-size: 12px;
+	position: absolute;
+	bottom: 25px
+}
+
+.pt-element .pt-element-weight {
+	font-size: 11px
+}
+
+.pt-inner .pt-element .pt-element-weight {
+	position: absolute;
+	bottom: 10px
+}
+
+.pt-table-filters .pt-element:hover {
+	z-index: 2;
+	cursor: pointer
+}
+
+.pt-table-filters .pt-element:hover,
+.pt-filter-hide .pt-element:hover {
+	background-color: #005daa;
+	color: #fff
+}
+
+.pt-element.pt-key {
+	background-color: #F5F6F8;
+	position: relative;
+	border: 1px solid #BEBBBB;
+	width: auto;
+	height: auto
+}
+
+.pt-element.pt-key:hover {
+	cursor: default;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1)
+}
+
+.pt-element .pt-key-title {
+	color: #555759;
+	font-size: 14px;
+	font-weight: 700;
+	position: absolute;
+	top: -20px;
+	left: 0
+}
+
+.pt-element .pt-key-info img {
+	margin: 0 auto;
+	display: block;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%)
+}
+
+.pt-element.pt-color-guide,
+.pt-group-filter {
+	background-color: transparent;
+	color: #555759;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1;
+	text-align: center;
+	padding: 7px 20px;
+	border: 1px solid #555759;
+	border-radius: 4px
+}
+
+.pt-element.pt-color-guide:hover,
+.pt-group-filter:hover {
+	cursor: pointer
+}
+
+.pt-group-filter:focus {
+	outline: none
+}
+
+.pt-element.pt-color-guide.pt-active,
+.pt-group-filter.pt-active {
+	background-color: #555759;
+	color: #fff
+}
+
+.pt-element.pt-color-guide.pt-active:hover,
+.pt-group-filter.pt-active:hover {
+	background-color: #6e7175
+}
+
+.pt-table .pt-alkali,
+.pt-inner .pt-alkali {
+	background: #0ABCDE
+}
+
+.pt-table .pt-alkaline,
+.pt-inner .pt-alkaline {
+	background: #00548B
+}
+
+.pt-table .pt-transition,
+.pt-inner .pt-transition {
+	background: #3A3B3C
+}
+
+.pt-table .pt-basic,
+.pt-inner .pt-basic {
+	background: #ED7700
+}
+
+.pt-table .pt-semimetal,
+.pt-inner .pt-semimetal {
+	background: #AD1E2D
+}
+
+.pt-table .pt-nonmetal,
+.pt-inner .pt-nonmetal {
+	background: #522D6D
+}
+
+.pt-table .pt-halogen,
+.pt-inner .pt-halogen {
+	background: #7474C1
+}
+
+.pt-table .pt-noble,
+.pt-inner .pt-noble {
+	background: #693DE2
+}
+
+.pt-table .pt-lanthanide,
+.pt-inner .pt-lanthanide {
+	background: #005DAA
+}
+
+.pt-table .pt-actinide,
+.pt-inner .pt-actinide {
+	background: #32D801
+}
+
+.pt-table .pt-not-selected {
+	background: #e6e6e6
+}
+
+.pt-not-selected .pt-element-number,
+.pt-not-selected .pt-element-symbol,
+.pt-not-selected .pt-element-name,
+.pt-not-selected .pt-element-weight {
+	color: #e6e6e6!important
+}
+
+.pt-table .pt-selected {
+	opacity: 1!important
+}
+
+.pt-table .pt-element-desc {
+	padding: 20px 35px;
+	-ms-grid-row: 4;
+	-ms-grid-row-span: -3;
+	-ms-grid-column: 13;
+	-ms-grid-column-span: -10;
+	grid-area: 4/13/1/3
+}
+
+.pt-table .pt-element-desc h2 {
+	color: #555759;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.03;
+	margin-bottom: 10px
+}
+
+.pt-table .pt-element-desc p {
+	color: #555759;
+	font-size: 12px;
+	margin-bottom: 20px
+}
+
+.pt-table-filters {
+	background-color: #F5F6F8;
+	margin-bottom: 10px;
+	padding: 13px 30px;
+	border: 1px solid #BEBBBB
+}
+
+.pt-filter-title {
+	margin-right: 25px;
+	float: left;
+}
+
+.pt-filter-title p {
+	margin: 4px 0 0
+}
+
+.pt-filter-title img {
+	display: inline-block;
+	vertical-align: middle
+}
+
+.pt-filter-hide {
+	width: 100%;
+	margin-left: 100px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row
+}
+
+.pt-filter-hide .pt-color-guide {
+	display: none
+}
+
+.pt-filter-hide .pt-element {
+	margin-top: 10px
+}
+
+#cg-all {
+	margin-right: 25px;
+	position: relative
+}
+
+#cg-all::after {
+	content: '';
+	width: 25px;
+	height: 25px;
+	display: block;
+	border-right: 1px solid #BEBBBB;
+	position: absolute;
+	right: -18px;
+	top: 0
+}
+
+#cg-nonmetals {
+	margin-right: 25px;
+	position: relative
+}
+
+#cg-nonmetals::after {
+	content: '';
+	width: 25px;
+	height: 25px;
+	display: block;
+	border-right: 1px solid #BEBBBB;
+	position: absolute;
+	right: -18px;
+	top: 0
+}
+
+#cg-states {
+	margin-right: 25px;
+	position: relative
+}
+
+#cg-states::after {
+	content: '';
+	width: 25px;
+	height: 25px;
+	display: block;
+	border-right: 1px solid #BEBBBB;
+	position: absolute;
+	right: -18px;
+	top: 0
+}
+
+button#pt-reset {
+	background: none;
+	color: #555759;
+	font-size: 14px;
+	margin: 5px 0 0 100px;
+	padding: 0;
+	clear: both;
+	border: none
+}
+
+button#pt-reset:hover {
+	cursor: pointer
+}
+
+button#pt-reset:focus {
+	outline: none
+}
+
+#h {
+	-ms-grid-row: 1;
+	-ms-grid-column: 1;
+	grid-area: 1/1/1/1
+}
+
+#he {
+	-ms-grid-row: 1;
+	-ms-grid-column: 18;
+	grid-area: 1/18/1/18
+}
+
+#li {
+	-ms-grid-row: 2;
+	-ms-grid-column: 1;
+	grid-area: 2/1/2/1
+}
+
+#be {
+	-ms-grid-row: 2;
+	-ms-grid-column: 2;
+	grid-area: 2/2/2/2
+}
+
+#b {
+	-ms-grid-row: 2;
+	-ms-grid-column: 13;
+	grid-area: 2/13/2/13
+}
+
+#c {
+	-ms-grid-row: 2;
+	-ms-grid-column: 14;
+	grid-area: 2/14/2/14
+}
+
+#n {
+	-ms-grid-row: 2;
+	-ms-grid-column: 15;
+	grid-area: 2/15/2/15
+}
+
+#o {
+	-ms-grid-row: 2;
+	-ms-grid-column: 16;
+	grid-area: 2/16/2/16
+}
+
+#f {
+	-ms-grid-row: 2;
+	-ms-grid-column: 17;
+	grid-area: 2/17/2/17
+}
+
+#ne {
+	-ms-grid-row: 2;
+	-ms-grid-column: 18;
+	grid-area: 2/18/2/18
+}
+
+#na {
+	-ms-grid-row: 3;
+	-ms-grid-column: 1;
+	grid-area: 3/1/3/1
+}
+
+#mg {
+	-ms-grid-row: 3;
+	-ms-grid-column: 2;
+	grid-area: 3/2/3/2
+}
+
+#al {
+	-ms-grid-row: 3;
+	-ms-grid-column: 13;
+	grid-area: 3/13/3/13
+}
+
+#si {
+	-ms-grid-row: 3;
+	-ms-grid-column: 14;
+	grid-area: 3/14/3/14
+}
+
+#p {
+	-ms-grid-row: 3;
+	-ms-grid-column: 15;
+	grid-area: 3/15/3/15
+}
+
+#s {
+	-ms-grid-row: 3;
+	-ms-grid-column: 16;
+	grid-area: 3/16/3/16
+}
+
+#cl {
+	-ms-grid-row: 3;
+	-ms-grid-column: 17;
+	grid-area: 3/17/3/17
+}
+
+#ar {
+	-ms-grid-row: 3;
+	-ms-grid-column: 18;
+	grid-area: 3/18/3/18
+}
+
+#k {
+	-ms-grid-row: 4;
+	-ms-grid-column: 1;
+	grid-area: 4/1/4/1
+}
+
+#ca {
+	-ms-grid-row: 4;
+	-ms-grid-column: 2;
+	grid-area: 4/2/4/2
+}
+
+#sc {
+	-ms-grid-row: 4;
+	-ms-grid-column: 3;
+	grid-area: 4/3/4/3
+}
+
+#ti {
+	-ms-grid-row: 4;
+	-ms-grid-column: 4;
+	grid-area: 4/4/4/4
+}
+
+#v {
+	-ms-grid-row: 4;
+	-ms-grid-column: 5;
+	grid-area: 4/5/4/5
+}
+
+#cr {
+	-ms-grid-row: 4;
+	-ms-grid-column: 6;
+	grid-area: 4/6/4/6
+}
+
+#mn {
+	-ms-grid-row: 4;
+	-ms-grid-column: 7;
+	grid-area: 4/7/4/7
+}
+
+#fe {
+	-ms-grid-row: 4;
+	-ms-grid-column: 8;
+	grid-area: 4/8/4/8
+}
+
+#co {
+	-ms-grid-row: 4;
+	-ms-grid-column: 9;
+	grid-area: 4/9/4/9
+}
+
+#ni {
+	-ms-grid-row: 4;
+	-ms-grid-column: 10;
+	grid-area: 4/10/4/10
+}
+
+#cu {
+	-ms-grid-row: 4;
+	-ms-grid-column: 11;
+	grid-area: 4/11/4/11
+}
+
+#zn {
+	-ms-grid-row: 4;
+	-ms-grid-column: 12;
+	grid-area: 4/12/4/12
+}
+
+#ga {
+	-ms-grid-row: 4;
+	-ms-grid-column: 13;
+	grid-area: 4/13/4/13
+}
+
+#ge {
+	-ms-grid-row: 4;
+	-ms-grid-column: 14;
+	grid-area: 4/14/4/14
+}
+
+#as {
+	-ms-grid-row: 4;
+	-ms-grid-column: 15;
+	grid-area: 4/15/4/15
+}
+
+#se {
+	-ms-grid-row: 4;
+	-ms-grid-column: 16;
+	grid-area: 4/16/4/16
+}
+
+#br {
+	-ms-grid-row: 4;
+	-ms-grid-column: 17;
+	grid-area: 4/17/4/17
+}
+
+#kr {
+	-ms-grid-row: 4;
+	-ms-grid-column: 18;
+	grid-area: 4/18/4/18
+}
+
+#rb {
+	-ms-grid-row: 5;
+	-ms-grid-column: 1;
+	grid-area: 5/1/5/1
+}
+
+#sr {
+	-ms-grid-row: 5;
+	-ms-grid-column: 2;
+	grid-area: 5/2/5/2
+}
+
+#y {
+	-ms-grid-row: 5;
+	-ms-grid-column: 3;
+	grid-area: 5/3/5/3
+}
+
+#zr {
+	-ms-grid-row: 5;
+	-ms-grid-column: 4;
+	grid-area: 5/4/5/4
+}
+
+#nb {
+	-ms-grid-row: 5;
+	-ms-grid-column: 5;
+	grid-area: 5/5/5/5
+}
+
+#mo {
+	-ms-grid-row: 5;
+	-ms-grid-column: 6;
+	grid-area: 5/6/5/6
+}
+
+#tc {
+	-ms-grid-row: 5;
+	-ms-grid-column: 7;
+	grid-area: 5/7/5/7
+}
+
+#ru {
+	-ms-grid-row: 5;
+	-ms-grid-column: 8;
+	grid-area: 5/8/5/8
+}
+
+#rh {
+	-ms-grid-row: 5;
+	-ms-grid-column: 9;
+	grid-area: 5/9/5/9
+}
+
+#pd {
+	-ms-grid-row: 5;
+	-ms-grid-column: 10;
+	grid-area: 5/10/5/10
+}
+
+#ag {
+	-ms-grid-row: 5;
+	-ms-grid-column: 11;
+	grid-area: 5/11/5/11
+}
+
+#cd {
+	-ms-grid-row: 5;
+	-ms-grid-column: 12;
+	grid-area: 5/12/5/12
+}
+
+#in {
+	-ms-grid-row: 5;
+	-ms-grid-column: 13;
+	grid-area: 5/13/5/13
+}
+
+#sn {
+	-ms-grid-row: 5;
+	-ms-grid-column: 14;
+	grid-area: 5/14/5/14
+}
+
+#sb {
+	-ms-grid-row: 5;
+	-ms-grid-column: 15;
+	grid-area: 5/15/5/15
+}
+
+#te {
+	-ms-grid-row: 5;
+	-ms-grid-column: 16;
+	grid-area: 5/16/5/16
+}
+
+#i {
+	-ms-grid-row: 5;
+	-ms-grid-column: 17;
+	grid-area: 5/17/5/17
+}
+
+#xe {
+	-ms-grid-row: 5;
+	-ms-grid-column: 18;
+	grid-area: 5/18/5/18
+}
+
+#cs {
+	-ms-grid-row: 6;
+	-ms-grid-column: 1;
+	grid-area: 6/1/6/1
+}
+
+#ba {
+	-ms-grid-row: 6;
+	-ms-grid-column: 2;
+	grid-area: 6/2/6/2
+}
+
+#hf {
+	-ms-grid-row: 6;
+	-ms-grid-column: 4;
+	grid-area: 6/4/6/4
+}
+
+#ta {
+	-ms-grid-row: 6;
+	-ms-grid-column: 5;
+	grid-area: 6/5/6/5
+}
+
+#w {
+	-ms-grid-row: 6;
+	-ms-grid-column: 6;
+	grid-area: 6/6/6/6
+}
+
+#re {
+	-ms-grid-row: 6;
+	-ms-grid-column: 7;
+	grid-area: 6/7/6/7
+}
+
+#os {
+	-ms-grid-row: 6;
+	-ms-grid-column: 8;
+	grid-area: 6/8/6/8
+}
+
+#ir {
+	-ms-grid-row: 6;
+	-ms-grid-column: 9;
+	grid-area: 6/9/6/9
+}
+
+#pt {
+	-ms-grid-row: 6;
+	-ms-grid-column: 10;
+	grid-area: 6/10/6/10
+}
+
+#au {
+	-ms-grid-row: 6;
+	-ms-grid-column: 11;
+	grid-area: 6/11/6/11
+}
+
+#hg {
+	-ms-grid-row: 6;
+	-ms-grid-column: 12;
+	grid-area: 6/12/6/12
+}
+
+#tl {
+	-ms-grid-row: 6;
+	-ms-grid-column: 13;
+	grid-area: 6/13/6/13
+}
+
+#pb {
+	-ms-grid-row: 6;
+	-ms-grid-column: 14;
+	grid-area: 6/14/6/14
+}
+
+#bi {
+	-ms-grid-row: 6;
+	-ms-grid-column: 15;
+	grid-area: 6/15/6/15
+}
+
+#po {
+	-ms-grid-row: 6;
+	-ms-grid-column: 16;
+	grid-area: 6/16/6/16
+}
+
+#at {
+	-ms-grid-row: 6;
+	-ms-grid-column: 17;
+	grid-area: 6/17/6/17
+}
+
+#rn {
+	-ms-grid-row: 6;
+	-ms-grid-column: 18;
+	grid-area: 6/18/6/18
+}
+
+#fr {
+	-ms-grid-row: 7;
+	-ms-grid-column: 1;
+	grid-area: 7/1/7/1
+}
+
+#ra {
+	-ms-grid-row: 7;
+	-ms-grid-column: 2;
+	grid-area: 7/2/7/2
+}
+
+#rf {
+	-ms-grid-row: 7;
+	-ms-grid-column: 4;
+	grid-area: 7/4/7/4
+}
+
+#db {
+	-ms-grid-row: 7;
+	-ms-grid-column: 5;
+	grid-area: 7/5/7/5
+}
+
+#sg {
+	-ms-grid-row: 7;
+	-ms-grid-column: 6;
+	grid-area: 7/6/7/6
+}
+
+#bh {
+	-ms-grid-row: 7;
+	-ms-grid-column: 7;
+	grid-area: 7/7/7/7
+}
+
+#hs {
+	-ms-grid-row: 7;
+	-ms-grid-column: 8;
+	grid-area: 7/8/7/8
+}
+
+#mt {
+	-ms-grid-row: 7;
+	-ms-grid-column: 9;
+	grid-area: 7/9/7/9
+}
+
+#ds {
+	-ms-grid-row: 7;
+	-ms-grid-column: 10;
+	grid-area: 7/10/7/10
+}
+
+#rg {
+	-ms-grid-row: 7;
+	-ms-grid-column: 11;
+	grid-area: 7/11/7/11
+}
+
+#cn {
+	-ms-grid-row: 7;
+	-ms-grid-column: 12;
+	grid-area: 7/12/7/12
+}
+
+#nh {
+	-ms-grid-row: 7;
+	-ms-grid-column: 13;
+	grid-area: 7/13/7/13
+}
+
+#fl {
+	-ms-grid-row: 7;
+	-ms-grid-column: 14;
+	grid-area: 7/14/7/14
+}
+
+#mc {
+	-ms-grid-row: 7;
+	-ms-grid-column: 15;
+	grid-area: 7/15/7/15
+}
+
+#lv {
+	-ms-grid-row: 7;
+	-ms-grid-column: 16;
+	grid-area: 7/16/7/16
+}
+
+#ts {
+	-ms-grid-row: 7;
+	-ms-grid-column: 17;
+	grid-area: 7/17/7/17
+}
+
+#og {
+	-ms-grid-row: 7;
+	-ms-grid-column: 18;
+	grid-area: 7/18/7/18
+}
+
+#la {
+	-ms-grid-row: 9;
+	-ms-grid-column: 4;
+	grid-area: 9/4/9/4
+}
+
+#ce {
+	-ms-grid-row: 9;
+	-ms-grid-column: 5;
+	grid-area: 9/5/9/5
+}
+
+#pr {
+	-ms-grid-row: 9;
+	-ms-grid-column: 6;
+	grid-area: 9/6/9/6
+}
+
+#nd {
+	-ms-grid-row: 9;
+	-ms-grid-column: 7;
+	grid-area: 9/7/9/7
+}
+
+#pm {
+	-ms-grid-row: 9;
+	-ms-grid-column: 8;
+	grid-area: 9/8/9/8
+}
+
+#sm {
+	-ms-grid-row: 9;
+	-ms-grid-column: 9;
+	grid-area: 9/9/9/9
+}
+
+#eu {
+	-ms-grid-row: 9;
+	-ms-grid-column: 10;
+	grid-area: 9/10/9/10
+}
+
+#gd {
+	-ms-grid-row: 9;
+	-ms-grid-column: 11;
+	grid-area: 9/11/9/11
+}
+
+#tb {
+	-ms-grid-row: 9;
+	-ms-grid-column: 12;
+	grid-area: 9/12/9/12
+}
+
+#dy {
+	-ms-grid-row: 9;
+	-ms-grid-column: 13;
+	grid-area: 9/13/9/13
+}
+
+#ho {
+	-ms-grid-row: 9;
+	-ms-grid-column: 14;
+	grid-area: 9/14/9/14
+}
+
+#er {
+	-ms-grid-row: 9;
+	-ms-grid-column: 15;
+	grid-area: 9/15/9/15
+}
+
+#tm {
+	-ms-grid-row: 9;
+	-ms-grid-column: 16;
+	grid-area: 9/16/9/16
+}
+
+#yb {
+	-ms-grid-row: 9;
+	-ms-grid-column: 17;
+	grid-area: 9/17/9/17
+}
+
+#lu {
+	-ms-grid-row: 9;
+	-ms-grid-column: 18;
+	grid-area: 9/18/9/18
+}
+
+#ac {
+	-ms-grid-row: 10;
+	-ms-grid-column: 4;
+	grid-area: 10/4/10/4
+}
+
+#th {
+	-ms-grid-row: 10;
+	-ms-grid-column: 5;
+	grid-area: 10/5/10/5
+}
+
+#pa {
+	-ms-grid-row: 10;
+	-ms-grid-column: 6;
+	grid-area: 10/6/10/6
+}
+
+#u {
+	-ms-grid-row: 10;
+	-ms-grid-column: 7;
+	grid-area: 10/7/10/7
+}
+
+#np {
+	-ms-grid-row: 10;
+	-ms-grid-column: 8;
+	grid-area: 10/8/10/8
+}
+
+#pu {
+	-ms-grid-row: 10;
+	-ms-grid-column: 9;
+	grid-area: 10/9/10/9
+}
+
+#am {
+	-ms-grid-row: 10;
+	-ms-grid-column: 10;
+	grid-area: 10/10/10/10
+}
+
+#cm {
+	-ms-grid-row: 10;
+	-ms-grid-column: 11;
+	grid-area: 10/11/10/11
+}
+
+#bk {
+	-ms-grid-row: 10;
+	-ms-grid-column: 12;
+	grid-area: 10/12/10/12
+}
+
+#cf {
+	-ms-grid-row: 10;
+	-ms-grid-column: 13;
+	grid-area: 10/13/10/13
+}
+
+#es {
+	-ms-grid-row: 10;
+	-ms-grid-column: 14;
+	grid-area: 10/14/10/14
+}
+
+#fm {
+	-ms-grid-row: 10;
+	-ms-grid-column: 15;
+	grid-area: 10/15/10/15
+}
+
+#md {
+	-ms-grid-row: 10;
+	-ms-grid-column: 16;
+	grid-area: 10/16/10/16
+}
+
+#no {
+	-ms-grid-row: 10;
+	-ms-grid-column: 17;
+	grid-area: 10/17/10/17
+}
+
+#lr {
+	-ms-grid-row: 10;
+	-ms-grid-column: 18;
+	grid-area: 10/18/10/18
+}
+
+#cg-alkali {
+	-ms-grid-row: 1;
+	-ms-grid-column: 1;
+	grid-area: 1/1/1/1
+}
+
+#cg-alkaline {
+	-ms-grid-row: 1;
+	-ms-grid-column: 2;
+	grid-area: 1/2/1/2
+}
+
+#cg-transition {
+	-ms-grid-row: 1;
+	-ms-grid-column: 3;
+	grid-area: 1/3/1/3
+}
+
+#cg-basic {
+	-ms-grid-row: 1;
+	-ms-grid-column: 4;
+	grid-area: 1/4/1/4
+}
+
+#cg-semimetal {
+	-ms-grid-row: 1;
+	-ms-grid-column: 5;
+	grid-area: 1/5/1/5
+}
+
+#cg-nonmetal {
+	-ms-grid-row: 1;
+	-ms-grid-column: 6;
+	grid-area: 1/6/1/6
+}
+
+#cg-halogen {
+	-ms-grid-row: 1;
+	-ms-grid-column: 7;
+	grid-area: 1/7/1/7
+}
+
+#cg-noble {
+	-ms-grid-row: 1;
+	-ms-grid-column: 8;
+	grid-area: 1/8/1/8
+}
+
+#cg-lanthanide {
+	-ms-grid-row: 1;
+	-ms-grid-column: 9;
+	grid-area: 1/9/1/9
+}
+
+#cg-actinide {
+	-ms-grid-row: 1;
+	-ms-grid-column: 10;
+	grid-area: 1/10/1/10
+}
+
+#lan {
+	-ms-grid-row: 6;
+	-ms-grid-column: 3;
+	grid-area: 6/3/6/3
+}
+
+#act {
+	-ms-grid-row: 7;
+	-ms-grid-column: 3;
+	grid-area: 7/3/7/3
+}
+
+#key {
+	-ms-grid-row: 9;
+	-ms-grid-row-span: 2;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 3;
+	grid-area: 9/1/11/4
+}
+
+.pt-accordion {
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+
+.pt-accordion .pt-inner {
+	background-color: #F4F4F4;
+	margin: 0;
+	padding: 25px;
+	overflow: hidden;
+	display: none
+}
+
+.pt-accordion li:nth-child(even) .pt-inner {
+	background-color: #e6e6e6
+}
+
+.pt-accordion li:nth-child(odd) .pt-inner {
+	background-color: #d6d6d6
+}
+
+.pt-accordion .pt-inner:target {
+	display: block
+}
+
+.pt-accordion li {
+	margin: 0;
+	display: block
+}
+
+.pt-accordion p {
+	color: #565757
+}
+
+.pt-accordion li a.pt-toggle {
+	background-color: #d6d6d6;
+	width: 100%;
+	padding: 20px;
+	display: block;
+	-webkit-transition: background .3s ease;
+	-o-transition: background .3s ease;
+	transition: background .3s ease;
+	position: relative
+}
+
+.pt-accordion li a.pt-toggle::before {
+	background: url(https://beta-static.fishersci.com/content/dam/fishersci/en_US/images/periodic-table/ico-down.png) right center no-repeat transparent;
+	background-size: 14px;
+	content: '';
+	width: 14%;
+	height: 17px;
+	float: right;
+	display: inline-block
+}
+
+.pt-accordion li.pt-active-ico a.pt-toggle::before {
+	background: url(https://beta-static.fishersci.com/content/dam/fishersci/en_US/images/periodic-table/ico-up.png) right center no-repeat transparent;
+	background-size: 14px
+}
+
+.pt-accordion li:nth-child(even) a.pt-toggle {
+	background-color: #e6e6e6
+}
+
+.pt-accordion li a.pt-toggle:hover {
+	background: rgba(0, 0, 0, .15);
+	cursor: pointer
+}
+
+.pt-accordion .pt-toggle p {
+	margin-bottom: 0
+}
+
+.pt-col-one-key {
+	width: 33%;
+	float: left;
+	display: inline-block
+}
+
+.pt-col-two-key {
+	width: 33%;
+	float: left;
+	display: inline-block
+}
+
+.pt-col-three-key {
+	width: 20%;
+	float: left;
+	display: inline-block
+}
+
+.pt-col-three-key p {
+	text-align: right
+}
+
+.pt-col-third {
+	width: 33.3333%;
+	float: left;
+	display: inline-block
+}
+
+.pt-col-atomic {
+	width: 24%
+}
+
+.pt-col-symbol p {
+	text-align: center
+}
+
+.pt-table-search {
+	position: relative
+}
+
+.pt-to-top {
+	background-color: #A2A4AA;
+	text-align: right;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 15px 30px;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0
+}
+
+.pt-to-top a {
+	color: #fff;
+	font-size: 16px;
+	text-decoration: none
+}
+
+.pt-to-top img {
+	height: 15px;
+	display: inline-block
+}
+
+.pt-search-box {
+	padding: .75em .75em .75em 0
+}
+
+.pt-search-box p {
+	color: #555759;
+	font-size: 14px;
+	margin-bottom: 10px
+}
+
+.pt-search-box input[type="text"] {
+	font-size: 15px;
+	width: 100%;
+	max-width: 300px;
+	padding: 7px 15px
+}
+
+.pt-search-box input[type="text"]::-webkit-input-placeholder {
+	color: #c4c3c3
+}
+
+.pt-search-box input[type="text"]::-moz-placeholder {
+	color: #c4c3c3
+}
+
+.pt-search-box input[type="text"]:-ms-input-placeholder {
+	color: #c4c3c3
+}
+
+.pt-search-box input[type="text"]::-ms-input-placeholder {
+	color: #c4c3c3
+}
+
+.pt-search-box input[type="text"]::placeholder {
+	color: #c4c3c3
+}
+
+#pt-search-table {
+	margin-bottom: 48px
+}
+
+.pt-search-table-key {
+	background-color: #727272;
+	padding: 20px
+}
+
+.pt-search-table-key p {
+	color: #fff;
+	margin-bottom: 0
+}
+
+.pt-col-element {
+	width: 15%;
+	margin-right: 1.3333%;
+	float: left
+}
+
+.pt-col-desc {
+	width: 43%;
+	margin-right: 3.3333%;
+	float: left
+}
+
+.pt-col-detail {
+	width: 32%;
+	float: left
+}
+
+.pt-table-mobile {
+	/*display: none*/
+}
+@media (max-width: 1200px) {
+	#h, #li, #na, #k, #rb, #cs, #fr {
+		display: none;
+	}
+}
+@media (max-width: 1050px) {
+	#be, #mg, #ca, #sr, #ba, #ra {
+		display: none;
+	}
+}
+@media (max-width: 910px) {
+	#sc, #y, #lan, #act, #key {
+		display: none;
+	}
+}
+@media (max-width: 859px) {
+	#h, #li, #na, #k, #rb, #cs, #fr,
+	#be, #mg, #ca, #sr, #ba, #ra,
+	#sc, #y, #lan, #act, #key {
+		display: block;
+	}
+
+	.pt-table {
+		transform: scale(0.75) translateX(-25vw);
+	}
+}
+@media (max-width: 700px) {
+	.pt-table {
+		transform: scale(0.6) translateX(-50vw);
+	}
+}
+@media (max-width: 530px) {
+	.pt-table {
+		transform: scale(0.5) translateX(-50vw);
+	}
+}
+@media (max-width: 425px) {
+	.pt-table {
+		transform: scale(0.4) translateX(-80vw);
+	}
+}
+@media (max-width: 320px) {
+	.pt-table {
+		transform: scale(0.3) translateX(-130vw);
+	}
+}
+
+
+
+/*main.container .pt-table {
+	min-width: 700px;
+}
+
+@media (max-width: 1200px) {
+	#h, #li, #na, #k, #rb, #cs, #fr,
+	#he, #ne, #ar, #kr, #xe, #rn, #og, #lu, #lr {
+		display: none;
+	}
+	main.container .pt-table {
+		margin-left: -64px;
+	}
+}
+@media (max-width: 1050px) {
+	main.container .pt-table {
+		margin-left: -115px;
+	}
+	#be, #mg, #ca, #sr, #ba, #ra, 
+	#f, #cl, #br, #i, #at, #ts, #yb, #no {
+		display: none;
+	}
+}
+@media (max-width: 910px) {
+	main.container .pt-table {
+		margin-left: -187px;
+	}
+	#sc, #y, #lan, #act,
+	#o, #s, #se, #te, #po, #lv, #tm, #md {
+		display: none;
+	}
+}
+@media (max-width: 775px) {
+	main.container .pt-table {
+		margin-left: -185px;
+	}
+	#ti, #zr, #hf, #rf, #la, #ac {
+		display: none;
+	}
+}
+@media (max-width: 700px) {
+	main.container .pt-table {
+		margin-left: 0px;
+	}
+}
+main.container .pt-table {
+	min-width: 700px;
+}*/
+
+/*main.container .pt-table {
+	width: 1200px;	
+}
+
+.pt-table-container {
+	width: 100%;
+	overflow: visible;
+	margin-left: -200px;
+}*/
+
+.pt-group:after,
+.pt-table .pt-section.pt-element:after {
+	content: "";
+	display: table;
+	clear: both
+}
 
 	.pt-element {
 		background: #98a2bb !important;
@@ -27,7 +1650,7 @@
 		transform: scale(1.5);
 		position: relative;
 		z-index: 100;
-		transition: transform 0.3s;
+		transition: transform 0.25s;
 		transition-timing-function: ease-in-out;
 		cursor: pointer;
 		background: transparent !important;
@@ -43,38 +1666,77 @@
 		pointer-events: all;
 	}
 	.pt-table .clickable-element.active .element-box {
-		transform: scale(0.75) translate(-11px, -11px);
+		transform: scale(0.5) translate(-31px, -31px);
 	}
+
+	/*Chrome*/
 	#cr {
-		transform: scale(1.5) translate(-10px, 0px);
+		transform: scale(1.5) translate(-11px, 0px);
 	}
+	#cr:hover {
+		transform: scale(1.6) translate(-10px, -2px);
+	}
+
+	/*Manganese*/
 	#mn {
-		transform: scale(1.5) translate(10px, 0px);
+		transform: scale(1.5) translate(11px, 0px);
 	}
+	#mn:hover {
+		transform: scale(1.6) translate(10px, -2px);
+	}
+
+	/*Aluminum*/
 	#al {
-		transform: scale(1.5) translate(0px, -20px);
+		transform: scale(1.5) translate(0px, -22px);
 	}
+	#al:hover {
+		transform: scale(1.6) translate(0px, -22px);
+	}
+
+	/*Nickel*/
 	#ni {
 		transform: scale(1.5) translate(-21px, 0px);
 	}
+	#ni:hover {
+		transform: scale(1.6) translate(-20px, -2px);
+	}
+
+	/*Zinc*/
 	#zn {
 		transform: scale(1.5) translate(21px, 0px);
 	}
-	#cr:hover {
-		transform: scale(1.6) translate(-11px, 0px);
-	}
-	#mn:hover {
-		transform: scale(1.6) translate(11px, 0px);
-	}
-	#al:hover {
-		transform: scale(1.6) translate(0px, -20px);
-	}
-	#ni:hover {
-		transform: scale(1.6) translate(-22px, 0px);
-	}
 	#zn:hover {
-		transform: scale(1.6) translate(22px, 0px);
+		transform: scale(1.6) translate(20px, -2px);
 	}
+
+	/*Silver*/
+	#ag {
+		transform: scale(1.5) translate(0px, 22px);
+	}
+	#ag:hover {
+		transform: scale(1.6) translate(0px, 19px);
+	}
+
+	/*Gold*/
+	#au {
+		transform: scale(1.5) translate(0px, 44px);
+	}
+	#au:hover {
+		transform: scale(1.6) translate(0px, 40px);
+	}
+
+	/*Copper*/
+	#cu:hover {
+		transform: scale(1.6) translate(0px, -2px);
+	}
+
+	/*Lead*/
+	#pb:hover {
+		transform: scale(1.6) translate(0px, -2px);
+	}
+
+
+
 	.pt-table .clickable-element.active {
 		transition: transform 0.5s; 
 		transform: scale(2.5) translate(-31px, -2px) !important;
@@ -135,6 +1797,60 @@
 		transition: transform 0.5s;
 	}
 
+	@media (max-width: 750px) {
+		#cr, #mn, #al, #ni, #zn, #ag, #au, #cu, #pb {
+			transform: scale(1);
+		}
+		.pt-table:not(.pt-mobile-table) > section.clickable-element {
+			pointer-events: none;
+		}
+		.pt-table:not(.pt-mobile-table) > section.clickable-element > .element-box {
+			/*opacity: 0;*/
+			background: transparent !important;
+			border: 1px solid black;
+		}
+		#cr, #mn, #al, #ni, #zn, #ag, #au, #cu, #pb {
+			transform: scale(1);
+		}
+		.pt-table.pt-mobile-table .clickable-element:not(.active):hover {
+		/*.pt-mobile-table .clickable-element:hover {*/
+			transform: scale(1.5);
+		}
+		.pt-table.pt-mobile-table .clickable-element.active {
+			transform: scale(2.5) translate(0px, 0px) !important;
+		}
+
+		.pt-table.pt-mobile-table #al-mobile.clickable-element.active {
+			transform: scale(2.5) translate(10px, 10px) !important;
+		}
+		.pt-table.pt-mobile-table #cr-mobile.clickable-element.active {
+			transform: scale(2.5) translate(-30px, 10px) !important;
+		}
+		.pt-table.pt-mobile-table #mn-mobile.clickable-element.active {
+			transform: scale(2.5) translate(-72px, 10px) !important;
+		}
+		
+		.pt-table.pt-mobile-table #ni-mobile.clickable-element.active {
+			transform: scale(2.5) translate(10px, -30px) !important;
+		}
+		.pt-table.pt-mobile-table #cu-mobile.clickable-element.active {
+			transform: scale(2.5) translate(-30px, -30px) !important;
+		}
+		.pt-table.pt-mobile-table #zn-mobile.clickable-element.active {
+			transform: scale(2.5) translate(-72px, -30px) !important;
+		}
+		
+		.pt-table.pt-mobile-table #ag-mobile.clickable-element.active {
+			transform: scale(2.5) translate(10px, -70px) !important;
+		}
+		.pt-table.pt-mobile-table #au-mobile.clickable-element.active {
+			transform: scale(2.5) translate(-30px, -70px) !important;
+		}
+		.pt-table.pt-mobile-table #pb-mobile.clickable-element.active {
+			transform: scale(2.5) translate(-72px, -70px) !important;
+		}
+	}
+
 	@keyframes flip {
 	  from {
 	  	
@@ -180,7 +1896,7 @@
 	}
 	.pt-element-background.active {
 	    transition: opacity 0.25s;
-		/*opacity: 1;*/
+		/*opacity: 1;*/	
 	  	z-index: 20;
 	    animation-name: flip;
 	    animation-duration: 0.75s;
@@ -232,6 +1948,10 @@
 		text-align: center;
 		position: relative;
 	}
+
+	.selected-element-details-titles {
+		padding: 0px 10px;
+	}
 	.element-menu-item {
 	    font-family: 'DM Serif Display', serif;
 	    list-style: none;
@@ -254,7 +1974,18 @@
 	    width: 100%;
 		opacity: 0;
 		transition: opacity 0.2s;
+		left: 0px;
 	}
+	@media (max-width: 1138px) {
+		.element-details-item-desc {
+			display: block !important;
+			padding-bottom: 15px !important;
+		}
+		.element-details-item-desc.circle {
+			display: none !important;
+		}
+	}
+
 	.element-details-item.active {
 		opacity: 1;
 	}
@@ -266,6 +1997,59 @@
 		/*font-style: italic;*/
 	}
 
+	.pt-table.pt-mobile-table {
+	    display: flex !important;
+	    position: absolute;
+	    width: 100%;
+	    top: 0px;
+	    /*left: 0px;*/
+	    right: calc(100vw - 550px);
+    	transform: initial;
+    	height: 75vh;
+    	padding: 75px;
+	    align-items: center;
+	    justify-content: center;
+	    align-content: center;
+	    flex-wrap: wrap;
+	    max-width: 540px;
+	    margin: auto;
+	}
+
+	.pt-table.pt-mobile-table .clickable-element {
+	    display: inline-block !important;
+	    /*margin-right: 40px;*/
+	    /*margin-bottom: 60px;*/
+	    margin: 20px 20px;
+    	flex: none;
+	}
+
+	@media (max-width: 500px) {
+		.pt-table.pt-mobile-table {
+		    right: 0px;
+	    	height: 75vh;
+	    	padding: 50px;
+		}
+		.selected-element-details {
+		    margin-top: -150px;
+    padding-bottom: 200px;
+		}
+
+	}
+
+	@media (max-width: 417px) {
+		.pt-table.pt-mobile-table {
+	    	padding: 5px;
+		}
+	}
+
+	@media (min-width: 751px) {
+
+		.pt-table.pt-mobile-table .clickable-element {
+		    display: none !important;
+		}
+	}
+
+
 </style>
 
 <script>
@@ -273,14 +2057,14 @@
 		let zIndex = 300
 
 		// let intervalFunc = null
-		document.querySelector(".pt-wrap").onclick = function(e) {
-			console.log("pt-wrap e", e.target)
+		document.querySelector(".container").onclick = function(e) {
+			console.log("container e", e.target)
 			if (!e.target.classList.contains('clickable-element') &&
 				!e.target.classList.contains('tabs') &&
 				!e.target.classList.contains('element-menu-item') &&
 				!e.target.classList.contains('element-details-item-desc') &&
 				!e.target.classList.contains('element-details-item')){
-				
+
 				document.querySelectorAll('.clickable-element.active').forEach(sEle => sEle.classList.remove("active"))
 				document.querySelectorAll('.element-menu-item.active').forEach(sEle => sEle.classList.remove("active"))
 				document.querySelectorAll('.element-details-item.active').forEach(sEle => sEle.classList.remove("active"))
@@ -290,14 +2074,16 @@
 		document.querySelectorAll(".pt-element").forEach(ele => {
 			ele.onclick = function(e) {
 
+				let detailsID = ele.id.endsWith('mobile') ? ele.id.split('-')[0] : ele.id
+
 				ele.classList.toggle("active")
-				document.querySelector(`.element-menu-item[ele="${ele.id}"`).classList.toggle("active")
-				document.querySelector(`.element-details-item[ele="${ele.id}"`).classList.toggle("active")
+				document.querySelector(`.element-menu-item[ele="${detailsID}"`).classList.toggle("active")
+				document.querySelector(`.element-details-item[ele="${detailsID}"`).classList.toggle("active")
 				ele.style.zIndex = zIndex++
 
 				document.querySelectorAll('.clickable-element.active').forEach(sEle => ele !== sEle && sEle.classList.remove("active"))
-				document.querySelectorAll('.element-menu-item.active').forEach(sEle => ele.id !== sEle.getAttribute('ele') && sEle.classList.remove("active"))
-				document.querySelectorAll('.element-details-item.active').forEach(sEle => ele.id !== sEle.getAttribute('ele') && sEle.classList.remove("active"))
+				document.querySelectorAll('.element-menu-item.active').forEach(sEle => detailsID !== sEle.getAttribute('ele') && sEle.classList.remove("active"))
+				document.querySelectorAll('.element-details-item.active').forEach(sEle => detailsID !== sEle.getAttribute('ele') && sEle.classList.remove("active"))
 
 				// intervalFunc && clearInterval(intervalFunc)
 				// intervalFunc = setInterval(displayNewTab, 4000);
@@ -305,7 +2091,8 @@
 		})
 		document.querySelectorAll(".element-menu-item").forEach(ele => {
 			ele.onclick = function(e) {
-				document.querySelector(`.pt-element[id="${ele.getAttribute('ele')}"]`).click();
+				eleID = window.innerWidth <= 750 ? ele.getAttribute('ele')+"-mobile" : ele.getAttribute('ele')
+				document.querySelector(`.pt-element[id="${eleID}"]`).click();
 			};
 		})
 		// function displayNewTab() {
@@ -331,7 +2118,116 @@
 	}
 </script>
 
-<main class="pt-wrap" style="padding-top: 50px;">
+<main class="container" style="padding-top: 50px;">
+	<div class="pt-table pt-mobile-table">
+
+      <section class="clickable-element pt-element pt-basic pt-post-transition pt-solid g13 p3" id="al-mobile">
+        <a class="element-box" href="#al13">
+          <div class="pt-element-number">13</div>
+          <h2 class="pt-element-symbol">Al</h2>
+          <div class="pt-element-name">Aluminum</div>
+          <p class="pt-element-weight">26.98</p>
+        </a>
+        <div class="tabs">
+          <div class="pt-element-background active" style="background: url(Aluminium.JPG);"></div>
+        </div>
+      </section>
+
+      <section class="clickable-element pt-element pt-transition pt-solid g6 p4" id="cr-mobile" tab="1" tab-length="3">
+        <a class="element-box" href="#cr24">
+          <div class="pt-element-number">24</div>
+          <h2 class="pt-element-symbol">Cr</h2>
+          <div class="pt-element-name">Chromium</div>
+          <div class="pt-element-weight">52.00</div>
+        </a>
+        <div class="tabs">
+          <div class="pt-element-background active" style="background: url(p02.jpg);">
+          </div>
+        </div>
+      </section>
+
+      <section class="clickable-element pt-element pt-transition pt-solid g7 p4" id="mn-mobile">
+        <a class="element-box" href="#mn25">
+          <div class="pt-element-number">25</div>
+          <h2 class="pt-element-symbol">Mn</h2>
+          <div class="pt-element-name">Manganese</div>
+          <div class="pt-element-weight">54.94</div>
+        </a>
+        <div class="tabs">
+          <div class="pt-element-background active" style="background: url(manganese.jpg);"></div>
+        </div>
+      </section>
+
+      <section class="clickable-element pt-element pt-transition pt-solid g10 p4" id="ni-mobile">
+        <a class="element-box" href="#ni28">
+          <div class="pt-element-number">28</div>
+          <h2 class="pt-element-symbol">Ni</h2>
+          <div class="pt-element-name">Nickel</div>
+          <div class="pt-element-weight">58.69</div>
+        </a>
+        <div class="tabs">
+          <div class="pt-element-background active" style="background: url(nickel.jpg);"></div>
+        </div>
+      </section>
+      <section class="clickable-element pt-element pt-transition pt-solid g11 p4" id="cu-mobile">
+        <a class="element-box" href="#cu29">
+          <div class="pt-element-number">29</div>
+          <h2 class="pt-element-symbol">Cu</h2>
+          <div class="pt-element-name">Copper</div>
+          <div class="pt-element-weight">63.55</div>
+        </a>
+        <div class="tabs">
+          <div class="pt-element-background active" style="background: url(cathode.JPG);"></div>
+        </div>
+      </section>
+
+      <section class="clickable-element pt-element pt-transition pt-solid g12 p4" id="zn-mobile">
+        <a class="element-box" href="#zn30">
+          <div class="pt-element-number">30</div>
+          <h2 class="pt-element-symbol">Zn</h2>
+          <div class="pt-element-name">Zinc</div>
+          <div class="pt-element-weight">65.38</div>
+        </a>
+        <div class="tabs">
+          <div class="pt-element-background active" style="background: url(zinc.JPG);"></div>
+        </div>
+      </section>
+
+      <section class="clickable-element pt-element pt-transition pt-solid g11 p5" id="ag-mobile">
+        <a class="element-box" href="#ag47">
+          <div class="pt-element-number">47</div>
+          <h2 class="pt-element-symbol">Ag</h2>
+          <div class="pt-element-name">Silver</div>
+          <div class="pt-element-weight">107.9</div>
+        </a>
+        <div class="tabs">
+          <div class="pt-element-background active" style="background: url(silver.jpg);"></div>
+        </div>
+      </section>
+      
+      <section class="clickable-element pt-element pt-transition pt-solid g11 p6" id="au-mobile">
+        <a class="element-box" href="#au79">
+          <div class="pt-element-number">79</div>
+          <h2 class="pt-element-symbol">Au</h2>
+          <div class="pt-element-name">Gold</div>
+          <div class="pt-element-weight">197.00</div>
+        </a>
+        <div class="tabs">
+          <div class="pt-element-background active" style="background: url(gold.jpg);"></div>
+        </div>
+      </section>
+      <section class="clickable-element pt-element pt-basic pt-post-transition pt-solid g14 p6" id="pb-mobile">
+        <a class="element-box" href="#pb82">
+          <div class="pt-element-number">82</div>
+          <h2 class="pt-element-symbol">Pb</h2>
+          <div class="pt-element-name">Lead</div>
+          <div class="pt-element-weight">207.2</div>
+        </a>
+        <div class="tabs">
+        	<div class="pt-element-background active" style="background: url(lead.JPG);"></div>
+        </div>
+      </section>
+  </div>
 <div class="pt-table">
       <section class="pt-element pt-nonmetal pt-gas g1 p1" id="h">
         <a href="#h1">
@@ -529,12 +2425,6 @@
         </a>
         <div class="tabs">
         	<div class="pt-element-background active" style="background: url(p02.jpg);">
-        		<!--<div class="tab-circles">
-        			<div class="transparent-circle"></div>
-        			<div class="transparent-circle"></div>
-        			<div class="circle"></div>
-        		</div>
-        		<div class="pt-element-label">ROM</div>-->
         	</div>
         </div>
       </section>
@@ -726,13 +2616,16 @@
           <div class="pt-element-weight">106.4</div>
         </a>
       </section>
-      <section class="pt-element pt-transition pt-solid g11 p5" id="ag">
-        <a href="#ag47">
+      <section class="clickable-element pt-element pt-transition pt-solid g11 p5" id="ag">
+        <a class="element-box" href="#ag47">
           <div class="pt-element-number">47</div>
           <h2 class="pt-element-symbol">Ag</h2>
           <div class="pt-element-name">Silver</div>
           <div class="pt-element-weight">107.9</div>
         </a>
+        <div class="tabs">
+        	<div class="pt-element-background active" style="background: url(silver.jpg);"></div>
+        </div>
       </section>
       <section class="pt-element pt-transition pt-solid g12 p5" id="cd">
         <a href="#cd48">
@@ -982,13 +2875,16 @@
           <div class="pt-element-weight">195.1</div>
         </a>
       </section>
-      <section class="pt-element pt-transition pt-solid g11 p6" id="au">
-        <a href="#au79">
+      <section class="clickable-element pt-element pt-transition pt-solid g11 p6" id="au">
+        <a class="element-box" href="#au79">
           <div class="pt-element-number">79</div>
           <h2 class="pt-element-symbol">Au</h2>
           <div class="pt-element-name">Gold</div>
           <div class="pt-element-weight">197.00</div>
         </a>
+        <div class="tabs">
+        	<div class="pt-element-background active" style="background: url(gold.jpg);"></div>
+        </div>
       </section>
       <section class="pt-element pt-transition pt-liquid g12 p6" id="hg">
         <a href="#hg80">
@@ -1323,53 +3219,62 @@
       </section>
     </div>
 	<div class="selected-element-details">
-		<ul>
+		<ul class="selected-element-details-titles">
+			<li class="element-menu-item" ele="al">Al</li>
 			<li class="element-menu-item" ele="cr">Cr</li>
 			<li class="element-menu-item" ele="mn">Mn</li>
 			<li class="element-menu-item" ele="ni">Ni</li>
 			<li class="element-menu-item" ele="cu">Cu</li>
 			<li class="element-menu-item" ele="zn">Zn</li>
-			<li class="element-menu-item" ele="al">Al</li>
+			<li class="element-menu-item" ele="ag">Ag</li>
+			<li class="element-menu-item" ele="au">Au</li>
 			<li class="element-menu-item" ele="pb">Pb</li>
 		</ul>
+
 		<ul class="element-details-item" ele="cr">
 			<li class="element-details-item-desc">ROM</li>
-			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc circle">&#9679;</li>
 			<li class="element-details-item-desc">Concentrate</li>
-			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc circle">&#9679;</li>
 			<li class="element-details-item-desc">Lumpy</li>
 		</ul>
 		<ul class="element-details-item" ele="mn">
 			<li class="element-details-item-desc">Lumpy Ore</li>
-			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc circle">&#9679;</li>
 			<li class="element-details-item-desc">Chips</li>
 		</ul>
 		<ul class="element-details-item" ele="ni">
 			<li class="element-details-item-desc">Primary Nickel (99.80%)</li>
-			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc circle">&#9679;</li>
 			<li class="element-details-item-desc">Briquettes</li>
 		</ul>
 		<ul class="element-details-item" ele="cu">
 			<li class="element-details-item-desc">LME Registered Grade A Cathodes</li>
-			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc circle">&#9679;</li>
 			<li class="element-details-item-desc">Non LME Registered Cathodes</li>
-			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc circle">&#9679;</li>
 			<li class="element-details-item-desc">Concentrates (16%+ Cu)</li>
 		</ul>
 		<ul class="element-details-item" ele="zn">
 			<li class="element-details-item-desc">SHG Ingots</li>
-			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc circle">&#9679;</li>
 			<li class="element-details-item-desc">Concentrates (45% +Zn)</li>
 		</ul>
 		<ul class="element-details-item" ele="al">
 			<li class="element-details-item-desc">P1020 (99.7%)</li>
-			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc circle">&#9679;</li>
 			<li class="element-details-item-desc">Ingots</li>
-			<li class="element-details-item-desc">&#9679;</li>
+			<li class="element-details-item-desc circle">&#9679;</li>
 			<li class="element-details-item-desc">Sows</li>
 		</ul>
 		<ul class="element-details-item" ele="pb">
 			<li class="element-details-item-desc">Concentrates (45% +Pb)</li>
+		</ul>
+		<ul class="element-details-item" ele="au">
+			<li class="element-details-item-desc">Concentrate (>20 g/MT)</li>
+		</ul>
+		<ul class="element-details-item" ele="ag">
+			<li class="element-details-item-desc">Concentrate (>200 g/MT)</li>
 		</ul>
 	</div>
 </main>
